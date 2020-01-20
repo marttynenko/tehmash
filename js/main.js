@@ -333,7 +333,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    if(jQuery('.easyzoom').length){
+    if(jQuery('.easyzoom').length && document.documentElement.clientWidth > 992){
         jQuery('.easyzoom').easyZoom();
     }
 
@@ -571,24 +571,24 @@ jQuery(document).ready(function () {
                     infinite: true,
                     slidesToShow: 4,
                     swipeToSlide: true,
-                    slidesToScroll: 1,
+                    slidesToScroll: 4,
                     responsive: [
                         {
                             breakpoint: 1200,
                             settings: {
                                 slidesToShow: 3,
-                                slidesToScroll: 1
+                                slidesToScroll: 3
                             }
                         },
                         {
                             breakpoint: 992,
                             settings: {
                                 slidesToShow: 2,
-                                slidesToScroll: 1
+                                slidesToScroll: 2
                             }
                         },
                         {
-                            breakpoint: 576,
+                            breakpoint: 360,
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1
@@ -782,25 +782,26 @@ jQuery(document).ready(function () {
             nextArrow: '.consumables__list .slide__next',
             infinite: true,
             slidesToShow: 4,
-            swipeToSlide: true,
-            slidesToScroll: 1,
+            slidesToScroll: 4,
+            draggable: false,
+            drag: false,
             responsive: [
                 {
                     breakpoint: 1200,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1
+                        slidesToScroll: 3
                     }
                 },
                 {
                     breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1
+                        slidesToScroll: 2
                     }
                 },
                 {
-                    breakpoint: 576,
+                    breakpoint: 360,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -941,9 +942,11 @@ function matchHeightUpdate() {
     }
 
     if(jQuery('.card__complect-block').length){
-        jQuery('.card__complect-block').matchHeight({
-            byRow: false
-        });
+        setTimeout(function(){
+            jQuery('.card__complect-block').matchHeight({
+                byRow: false
+            });
+        },200)
     }
 
     if(jQuery('.compare__item-top').length){
@@ -1009,3 +1012,8 @@ function cartModalSum() {
 
     jQuery('.table__result span').text(numberWithSpaces(Math.round(sum * 100) / 100) + ' руб.');
 }
+
+
+$(window).on('load',function(){
+    matchHeightUpdate();
+})

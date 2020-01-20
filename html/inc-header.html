@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>ТехМаш</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-Regular.eot');
+      src: url('../fonts/Panton-Regular.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/Panton-Regular.woff2') format('woff2'),
+          url('../fonts/Panton-Regular.woff') format('woff'),
+          url('../fonts/Panton-Regular.ttf') format('truetype'),
+          url('../fonts/Panton-Regular.svg#Panton-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-RegularItalic.eot');
+      src: url('../fonts/Panton-RegularItalic.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/Panton-RegularItalic.woff2') format('woff2'),
+          url('../fonts/Panton-RegularItalic.woff') format('woff'),
+          url('../fonts/Panton-RegularItalic.ttf') format('truetype'),
+          url('../fonts/Panton-RegularItalic.svg#Panton-RegularItalic') format('svg');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-Light.eot');
+      src: url('../fonts/Panton-Light.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/Panton-Light.woff2') format('woff2'),
+          url('../fonts/Panton-Light.woff') format('woff'),
+          url('../fonts/Panton-Light.ttf') format('truetype'),
+          url('../fonts/Panton-Light.svg#Panton-Light') format('svg');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton Light';
+      src: url('../fonts/Panton-LightItalic.eot');
+      src: url('../fonts/Panton-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-LightItalic.woff2') format('woff2'),
+        url('../fonts/Panton-LightItalic.woff') format('woff'),
+        url('../fonts/Panton-LightItalic.ttf') format('truetype'),
+        url('../fonts/Panton-LightItalic.svg#Panton-LightItalic') format('svg');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-SemiBold.eot');
+      src: url('../fonts/Panton-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-SemiBold.woff2') format('woff2'),
+        url('../fonts/Panton-SemiBold.woff') format('woff'),
+        url('../fonts/Panton-SemiBold.ttf') format('truetype'),
+        url('../fonts/Panton-SemiBold.svg#Panton-SemiBold') format('svg');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton SemiBold';
+      src: url('../fonts/Panton-SemiBoldItalic.eot');
+      src: url('../fonts/Panton-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Panton-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/Panton-SemiBoldItalic.ttf') format('truetype'),
+        url('../fonts/Panton-SemiBoldItalic.svg#Panton-SemiBoldItalic') format('svg');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-Bold.eot');
+      src: url('../fonts/Panton-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-Bold.woff2') format('woff2'),
+        url('../fonts/Panton-Bold.woff') format('woff'),
+        url('../fonts/Panton-Bold.ttf') format('truetype'),
+        url('../fonts/Panton-Bold.svg#Panton-Bold') format('svg');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton Bold';
+      src: url('../fonts/Panton-BoldItalic.eot');
+      src: url('../fonts/Panton-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Panton-BoldItalic.woff') format('woff'),
+        url('../fonts/Panton-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Panton-BoldItalic.svg#Panton-BoldItalic') format('svg');
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-ExtraBold.eot');
+      src: url('../fonts/Panton-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Panton-ExtraBold.woff') format('woff'),
+        url('../fonts/Panton-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Panton-ExtraBold.svg#Panton-ExtraBold') format('svg');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton ExtraBold';
+      src: url('../fonts/Panton-ExtraBoldItalic.eot');
+      src: url('../fonts/Panton-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Panton-ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/Panton-ExtraBoldItalic.ttf') format('truetype'),
+        url('../fonts/Panton-ExtraBoldItalic.svg#Panton-ExtraBoldItalic') format('svg');
+      font-weight: 800;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton';
+      src: url('../fonts/Panton-Black.eot');
+      src: url('../fonts/Panton-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-Black.woff2') format('woff2'),
+        url('../fonts/Panton-Black.woff') format('woff'),
+        url('../fonts/Panton-Black.ttf') format('truetype'),
+        url('../fonts/Panton-Black.svg#Panton-Black') format('svg');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Panton Black';
+      src: url('../fonts/Panton-BlackItalic.eot');
+      src: url('../fonts/Panton-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Panton-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Panton-BlackItalic.woff') format('woff'),
+        url('../fonts/Panton-BlackItalic.ttf') format('truetype'),
+        url('../fonts/Panton-BlackItalic.svg#Panton-BlackItalic') format('svg');
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css"  href="../css/libs.minify.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body class="not-front">
+  <div class="wrapper flex-wrapper">
+    <div class="scroll scroll__up"></div>
+    <div class="header__fixed">
+      <div class="container clearfix">
+        <div class="header__fixed-left">
+          <a href="../" class="logo logo-micro-svg">
+            <img src="../images/svg/01_logo_sign.svg"  loading="lazy">
+          </a>
+          <div class="main__nav">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="sprite svg-h-gift">
+                    <use xlink:href="../svg/svg/symbols.svg#02_gift"></use>
+                  </svg>
+                  <span>% Акции</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <span>Доставка и оплата</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <span>Сервис и гарантия</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <span>Рассрочка</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <span>Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="phone__fixed">
+            <div class="phone__fixed-item phone__custom-icon">
+              <a href="tel:+74953696089">+7 (495) 369-60-89</a>
+            </div>
+            <div class="phone__fixed-item">
+              <a href="tel:88001000968">8 (800) 100-09-68</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__fixed-right">
+          <div class="action__nav">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="sprite svg-h-question">
+                    <use xlink:href="../svg/svg/symbols.svg#03_question"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="sprite svg-h-question">
+                    <use xlink:href="../svg/svg/symbols.svg#18_checkbox_a"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="sprite svg-h-question">
+                    <use xlink:href="../svg/svg/symbols.svg#04_compare"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="sprite svg-h-question">
+                    <use xlink:href="../svg/svg/symbols.svg#05_user"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__fixed-sep"></div>
+          <div class="header__cart header__cart-fixed-svg">
+            <div class="cart__empty-btn">
+              <svg class="sprite svg-h-question">
+                <use xlink:href="../svg/svg/symbols.svg#07_cart"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="nav-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container clearfix">
+          <div class="header__top-left">
+            <div class="main__nav">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <svg class="sprite svg-h-gift">
+                      <use xlink:href="../svg/svg/symbols.svg#02_gift">
+                    </svg>
+                    <span>Акции</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Доставка и оплата</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Сервис и гарантия</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Рассрочка</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Контакты</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__top-right">
+            <div class="action__nav">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <svg class="sprite svg-h-question">
+                      <use xlink:href="../svg/svg/symbols.svg#03_question">
+                    </svg>
+                    <span>Задать вопрос</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <svg class="sprite svg-h-compare">
+                      <use xlink:href="../svg/svg/symbols.svg#04_compare">
+                    </svg>
+                    <span>В сравнении (0)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <svg class="sprite svg-h-user">
+                      <use xlink:href="../svg/svg/symbols.svg#05_user">
+                    </svg>
+                    <span>Войти</span>
+                  </a>
+                </li>
+                <div class="nav-bars">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__main">
+        <div class="container clearfix">
+          <div class="logo__wrap logo__wide">
+            <a href="../">
+              <img src="../images/svg/01_logo.svg" class="logo-desktop"  loading="lazy">
+            </a>
+          </div>
+          <div class="header__contacts">
+            <div class="header__contacts-phone">
+              <svg class="sprite svg-h-phone">
+                <use xlink:href="../svg/svg/symbols.svg#06_phone">
+              </svg>
+              <a href="tel:+74953696089" class="header__contacts-phone-link">+7 (495) 369-60-89</a>
+              <div class="header__contacts-phone-toggler toggle_by_attr" onclick="" data-target=".header__contacts-drop"></div>
+            </div>
+            <div class="header__contacts-mail">
+              <svg class="sprite svg-h-mail">
+                <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+              </svg>
+              <a href="mailto:info@pnevmoteh.by" class="header__contacts-mail-link">info@pnevmoteh.by</a>
+              <svg class="sprite svg-messenger-mini">
+                <use xlink:href="../svg/svg/symbols.svg#31_viber">
+              </svg>
+              <svg class="sprite svg-messenger-mini">
+                <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+              </svg>
+              <svg class="sprite svg-messenger-mini">
+                <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+              </svg>
+            </div>
+            <div class="header__contacts-drop header__dropdown">
+              <div class="header__contacts-drop-group">
+                <div class="header__contacts-drop-phone">
+                  <svg class="sprite svg-drop-phone">
+                    <use xlink:href="../svg/svg/symbols.svg#a1">
+                  </svg>
+                  <a href="tel:+375293547887">+375 (29) 354-78-87</a>
+                </div>
+                <div class="header__contacts-drop-phone">
+                  <svg class="sprite svg-drop-phone">
+                    <use xlink:href="../svg/svg/symbols.svg#24_mts">
+                  </svg>
+                  <a href="tel:+375333547887">+375 (33) 354-78-87</a>
+                </div>
+                <div class="header__contacts-drop-phone">
+                  <svg class="sprite svg-drop-phone">
+                    <use xlink:href="../svg/svg/symbols.svg#24_btc">
+                  </svg>
+                  <a href="tel:+375173027887">+375 (17) 302-78-87</a>
+                </div>
+              </div>
+              <div class="header__contacts-drop-group">
+                <div class="header__contacts-drop-messenger">
+                  <svg class="sprite svg-drop-messenger">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <a href="#">+375 (29) 334-78-87</a>
+                </div>
+                <div class="header__contacts-drop-messenger">
+                  <svg class="sprite svg-drop-messenger">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                  <a href="#">@pnevmoteh</a>
+                </div>
+                <div class="header__contacts-drop-messenger">
+                  <svg class="sprite svg-drop-messenger">
+                    <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+                  </svg>
+                  <a href="#">+375 (29) 354-78-87</a>
+                </div>
+              </div>
+              <div class="header__contacts-drop-group">
+                <div class="header__contacts-drop-contact">
+                  <svg class="sprite svg-drop-contact">
+                    <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                  </svg>
+                  <a href="malito:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                </div>
+                <div class="header__contacts-drop-contact">
+                  <svg class="sprite svg-drop-contact">
+                    <use xlink:href="../svg/svg/symbols.svg#28_time">
+                  </svg>
+                  Пн-Пт 9:00-18:00
+                </div>
+                <div class="header__contacts-drop-contact">
+                  <svg class="sprite svg-drop-contact">
+                    <use xlink:href="../svg/svg/symbols.svg#29_pin">
+                  </svg>
+                  г.Минск, ул.Скрыганова, 4Д, пом. 424
+                </div>
+              </div>
+              <div class="header__contacts-drop-socials">
+                <a href="#" class="header__contacts-drop-social vk">
+                  <svg class="sprite svg-header-social">
+                    <use xlink:href="../svg/svg/symbols.svg#38_vk">
+                  </svg>
+                </a>
+                <a href="#" class="header__contacts-drop-social fb">
+                  <svg class="sprite svg-header-social">
+                    <use xlink:href="../svg/svg/symbols.svg#38_fb">
+                  </svg>
+                </a>
+                <a href="#" class="header__contacts-drop-social yt">
+                  <svg class="sprite svg-header-social">
+                    <use xlink:href="../svg/svg/symbols.svg#38_yt">
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!--.heade__contacts-drop-->
+          </div>
+
+          <div class="header__main-right">
+            <div class="search__block search__block-wide">
+              <form method="post" action="">
+                <div class="search__field">
+                  <input type="text" name="" placeholder="Поиск" class="search__field-input">
+                  <button type="submit" class="search__field-btn">
+                    <svg class="sprite svg-h-searcher">
+                      <use xlink:href="../svg/svg/symbols.svg#08_search">
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="header__cart header__cart-svg">
+              <div class="cart__btn">
+                <svg class="sprite svg-h-cart">
+                  <use xlink:href="../svg/svg/symbols.svg#07_cart">
+                </svg>
+                <span class="hidden-xs">Корзина пуста</span>
+                <span class="hidden-sm-up">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__mobile">
+        <div class="container">
+          <div class="flex justify-content-between align-items-center">
+            <div class="header__mobile-logo">
+              <a href="/" class="header__mobile-logo-link">
+                <svg class="sprite svg-mobile-logo">
+                  <use xlink:href="../svg/svg/symbols.svg#01_logo">
+                </svg>
+              </a>
+            </div>
+
+            <div class="header__mobile-actions">
+              <span class="header__mobile-action">
+                <svg class="sprite svg-mobile-action">
+                  <use xlink:href="../svg/svg/symbols.svg#05_user">
+                </svg>
+              </span>
+              <span class="header__mobile-action" data-target="header__mobile-phones">
+                <svg class="sprite svg-mobile-action">
+                  <use xlink:href="../svg/svg/symbols.svg#06_phone">
+                </svg>
+              </span>
+              <span class="header__mobile-action" data-target="header__mobile-search">
+                <svg class="sprite svg-mobile-action">
+                  <use xlink:href="../svg/svg/symbols.svg#08_search">
+                </svg>
+              </span>
+              <span class="header__mobile-action header__mobile-cart">
+                <svg class="sprite svg-mobile-action">
+                  <use xlink:href="../svg/svg/symbols.svg#07_cart">
+                </svg>
+                <span class="header__mobile-cart-counter">2</span>
+              </span>
+              <span class="header__mobile-action header__mobile-mtoggler" data-target="mobile__menu">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+              </span>
+            </div>
+          </div>
+        </div><!--.container-->
+        <div class="header__mobile-blocks">
+          <div class="header__mobile-phones header__mobile-drop">
+            <div class="container">
+              <div class="header__contacts-drop">
+                <div class="header__contacts-drop-group">
+                  <div class="header__contacts-drop-phone">
+                    <svg class="sprite svg-drop-phone">
+                      <use xlink:href="../svg/svg/symbols.svg#a1">
+                    </svg>
+                    <a href="tel:+375293547887">+375 (29) 354-78-87</a>
+                  </div>
+                  <div class="header__contacts-drop-phone">
+                    <svg class="sprite svg-drop-phone">
+                      <use xlink:href="../svg/svg/symbols.svg#24_mts">
+                    </svg>
+                    <a href="tel:+375333547887">+375 (33) 354-78-87</a>
+                  </div>
+                  <div class="header__contacts-drop-phone">
+                    <svg class="sprite svg-drop-phone">
+                      <use xlink:href="../svg/svg/symbols.svg#24_btc">
+                    </svg>
+                    <a href="tel:+375173027887">+375 (17) 302-78-87</a>
+                  </div>
+                </div>
+                <div class="header__contacts-drop-group">
+                  <div class="header__contacts-drop-messenger">
+                    <svg class="sprite svg-drop-messenger">
+                      <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                    </svg>
+                    <a href="#">+375 (29) 334-78-87</a>
+                  </div>
+                  <div class="header__contacts-drop-messenger">
+                    <svg class="sprite svg-drop-messenger">
+                      <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                    </svg>
+                    <a href="#">@pnevmoteh</a>
+                  </div>
+                  <div class="header__contacts-drop-messenger">
+                    <svg class="sprite svg-drop-messenger">
+                      <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+                    </svg>
+                    <a href="#">+375 (29) 354-78-87</a>
+                  </div>
+                </div>
+                <div class="header__contacts-drop-group">
+                  <div class="header__contacts-drop-contact">
+                    <svg class="sprite svg-drop-contact">
+                      <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                    </svg>
+                    <a href="malito:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                  </div>
+                  <div class="header__contacts-drop-contact">
+                    <svg class="sprite svg-drop-contact">
+                      <use xlink:href="../svg/svg/symbols.svg#28_time">
+                    </svg>
+                    Пн-Пт 9:00-18:00
+                  </div>
+                  <div class="header__contacts-drop-contact">
+                    <svg class="sprite svg-drop-contact">
+                      <use xlink:href="../svg/svg/symbols.svg#29_pin">
+                    </svg>
+                    г.Минск, ул.Скрыганова, 4Д, пом. 424
+                  </div>
+                </div>
+                <div class="header__contacts-drop-socials">
+                  <a href="#" class="header__contacts-drop-social vk">
+                    <svg class="sprite svg-header-social">
+                      <use xlink:href="../svg/svg/symbols.svg#38_vk">
+                    </svg>
+                  </a>
+                  <a href="#" class="header__contacts-drop-social fb">
+                    <svg class="sprite svg-header-social">
+                      <use xlink:href="../svg/svg/symbols.svg#38_fb">
+                    </svg>
+                  </a>
+                  <a href="#" class="header__contacts-drop-social yt">
+                    <svg class="sprite svg-header-social">
+                      <use xlink:href="../svg/svg/symbols.svg#38_yt">
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div><!--phones-->
+          <div class="header__mobile-search header__mobile-drop">
+            <div class="container">
+              <form method="post" action="">
+                <div class="search__field">
+                  <input type="text" name="" placeholder="Поиск" class="search__field-input">
+                  <button type="submit" class="search__field-btn">
+                    <svg class="sprite svg-h-searcher">
+                      <use xlink:href="../svg/svg/symbols.svg#08_search">
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div><!--search-->
+          <div class="mobile__menu header__mobile-drop">
+            <a href="#" class="mobile__menu-link">
+              <svg class="sprite svg-mm-icon">
+                <use xlink:href="../svg/svg/symbols.svg#05_user">
+              </svg>
+              <span>Войти</span>
+            </a>
+            <a href="#" class="mobile__menu-link">
+              <svg class="sprite svg-mm-icon">
+                <use xlink:href="../svg/svg/symbols.svg#place">
+              </svg>
+              <span>Ваш город: Нижневартовск</span>
+            </a>
+            <a href="#" class="mobile__menu-link">
+              <svg class="sprite svg-mm-icon">
+                <use xlink:href="../svg/svg/symbols.svg#02_gift">
+              </svg>
+              <span>Акции</span>
+            </a>
+            <ul class="mobile__menu-catalog">
+              <li><a href="#">Категория 1</a>
+                <ul class="mobile__menu-catalog-level-2">
+                  <li><a href="#">Подкатегория 1</a></li>
+                  <li><a href="#">Подкатегория 2</a>
+                    <ul class="mobile__menu-catalog-level-3">
+                      <li><a href="#">Подподкатегория 1</a></li>
+                      <li><a href="#">Подподкатегория 2</a>
+                        <ul>
+                          <li><a href="#">Последняя категория 1</a></li>
+                          <li><a href="#">Последняя категория 2</a></li>
+                          <li><a href="#">Последняя категория 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Подподкатегория 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Подкатегория 3</a></li>
+                  <li><a href="#">Подкатегория 4</a></li>
+                  <li><a href="#">Подкатегория 5</a></li>
+                  <li><a href="#">Подкатегория 6</a></li>
+                  <li><a href="#">Подкатегория 7</a></li>
+                  <li><a href="#">Подкатегория 8</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Категория 2</a></li>
+              <li><a href="#">Категория 3</a>
+                <ul class="mobile__menu-catalog-level-2">
+                  <li><a href="#">Подкатегория 1</a></li>
+                  <li><a href="#">Подкатегория 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Категория 4</a></li>
+              <li><a href="#">Категория 5</a></li>
+            </ul>
+            <ul class="mobile__menu-customer">
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Сервис и гарантия</a></li>
+            </ul>
+          </div><!--.mobile__menu-->
+          
+        </div><!--.header__mobile-blocks-->
+      </div><!--.header__mobile-->
+      <div class="mobile__menu-overlay"></div>
+    </header>

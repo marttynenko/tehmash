@@ -1,0 +1,263 @@
+<!--#include file="inc-header.html"-->
+
+<div class="content">
+  <div class="page__menu">
+      <div class="container">
+          <div class="row">
+              <div class="col-catalog-menu">
+                  <!--#include file="inc-catalog-menu.html"-->
+              </div><!--.col-catalog-menu-->
+              <div class="col-breadcrumbs">
+                  <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                          <span itemprop="name"><a href="../">Главная</a></span>
+                          <meta itemprop="position" content="1">
+                      </li>
+                      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                          <span itemprop="name">Контакты</span>
+                          <meta itemprop="position" content="2">
+                      </li>
+                  </ol>
+              </div>
+          </div>
+      </div>
+  </div><!--.page__menu-->
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3">
+        <div class="contacts__anchors">
+          <ul>
+            <li><a href="#contacts__office">Офис</a></li>
+            <li><a href="#contacts__stock">Склад</a></li>
+            <li><a href="#contacts__map">Схема проезда к складу</a></li>
+            <li><a href="#contacts__map">Склад на Я.Картах</a></li>
+            <li><a href="#contacts__team">Наши сотрудники</a></li>
+            <li><a href="#contacts__regions">Контакты в регионах</a></li>
+            <li><a href="#contacts_requisites">Реквизиты</a></li>
+          </ul>
+        </div>
+      </div><!--sidebar-->
+
+      <div class="col-lg-9">
+        <div class="page__title">
+          <h1>Контакты</h1>
+        </div>
+
+        <div class="contacts__block contacts__block-bordered" id="contacts__office">
+          <div class="h4 contacts__block-title">Офис</div>
+          <div class="contacts-iconed-item">
+            <svg class="sprite i-svg svg-contact-icon">
+              <use xlink:href="../svg/svg/symbols.svg#26_smartphone">
+            </svg>
+            +7 (495) 369-60-89
+            <span class="dot"></span>
+            8 (800) 100-09-68
+          </div>
+          <div class="contacts-iconed-item">
+            <svg class="sprite i-svg svg-contact-icon">
+              <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+            </svg>
+            info@pnevmoteh.by&nbsp;&nbsp;&nbsp;<a href="#" class="callback-link"><strong>Обратная связь</strong></a>
+          </div>
+          <div class="contacts-iconed-item">
+            <svg class="sprite i-svg svg-contact-icon">
+              <use xlink:href="../svg/svg/symbols.svg#28_time">
+            </svg>
+            Пн-Пт 07:00-18:00<span class="dot"></span>Сб 09:30-18:00<span class="dot"></span>Вс 10:00-15:00
+          </div>
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block" id="contacts__stock">
+          <div class="h4 contacts__block-title">Склад</div>
+          <div class="contacts-iconed-item">
+            <svg class="sprite i-svg svg-contact-icon">
+              <use xlink:href="../svg/svg/symbols.svg#29_pin">
+            </svg>
+            Москва, Каширское шоссе 67, строение 14<span class="dot"></span>GPS координаты: N53.908923, E27.522178
+          </div>
+          <div class="contacts-iconed-item">
+            <svg class="sprite i-svg svg-contact-icon">
+              <use xlink:href="../svg/svg/symbols.svg#28_time">
+            </svg>
+            Пн-Пт 09:00-18:00<span class="dot"></span>Сб 09:00-17:00<span class="dot"></span>Вс 11:00-15:00
+          </div>
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block" id="contacts__map">
+          <div class="contacts__block-map" id="scheme_map">
+            <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A265d48c50627f3fe363ff62968259e0136ce83aeca7a51fdfbcfb3ff27d8633c&amp;width=100%25&amp;height=499&amp;lang=ru_UA&amp;scroll=true"></script>
+          </div>
+          <div class="contacts__media">
+            <div class="row">
+              <div class="col-6">
+                <a href="../images/map_1.jpeg" class="fancybox" data-fancybox-group="contacts">
+                    <img src="../images/map_1-prev.jpg" loading="lazy">
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="../images/map_2.jpeg" class="fancybox" data-fancybox-group="contacts">
+                  <img src="../images/map_2-prev.jpg" loading="lazy">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block" id="contacts__team">
+          <div class="contacts__person">
+            <div class="contacts__person-body">
+              <div class="contacts__person-top">
+                <div class="contacts__person-img"><img src="../images/video/person-1.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__person-name">Хлесткин Игорь</div>
+                <div class="contacts__person-pos">Коммерческий директор</div>
+              </div>
+              <a href="#" class="btn__custom btn__custom-blue contacts__person-btn">
+                <svg class="sprite i-svg svg-envelope-yellow">
+                  <use xlink:href="../svg/svg/symbols.svg#27_envelope_nofill">
+                </svg>Написать письмо
+              </a>
+              <div class="contacts__person-about">Моя главная задача — подобрать для вас компетентных специалистов, с которыми вам будет удобно работать. Если у вас есть предложение, как поднять наш уровень сервиса, пожалуйста, напишите мне.</div>
+            </div>
+          </div><!--.contacts__person-->
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block contacts__block-nomargin">
+          <div class="h4 contacts__block-title">Сотрудники отдела продаж</div>
+
+          <div class="contacts__person gray">
+            <div class="contacts__person-body">
+              <div class="contacts__person-top">
+                <div class="contacts__person-img"><img src="../images/video/person-1.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__person-name">Набибулин Артур</div>
+                <div class="contacts__person-pos">Руководитель отдела продаж</div>
+              </div>
+              <a href="#" class="btn__custom btn__custom-blue contacts__person-btn">
+                <svg class="sprite i-svg svg-envelope-yellow">
+                  <use xlink:href="../svg/svg/symbols.svg#27_envelope_nofill">
+                </svg>Написать письмо
+              </a>
+              <div class="contacts__person-about">Моя главная задача — подобрать для вас компетентных специалистов, с которыми вам будет удобно работать. Если у вас есть предложение, как поднять наш уровень сервиса, пожалуйста, напишите мне.</div>
+            </div>
+          </div><!--.contacts__person-->
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="contacts__miniperson flex">
+                <div class="contacts__miniperson-img"><img src="../images/video/person-mini-1.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__miniperson-body">
+                  <div class="contacts__miniperson-name">Тамбовский Владимир</div>
+                  <div class="contacts__miniperson-pos">Менеджер по продажам</div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#26_smartphone">
+                    </svg>
+                    <a href="tel:88003339121">8-800-333-91-21</a>, доб.205
+                  </div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                    </svg>
+                    <a href="mailto:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="contacts__miniperson flex">
+                <div class="contacts__miniperson-img"><img src="../images/video/person-mini-2.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__miniperson-body">
+                  <div class="contacts__miniperson-name">Скоробогатова Елизавета</div>
+                  <div class="contacts__miniperson-pos">PR-менеджер</div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#26_smartphone">
+                    </svg>
+                    <a href="tel:+74953696089">+7 (495) 369-60-89</a>
+                  </div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                    </svg>
+                    <a href="mailto:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="contacts__miniperson flex">
+                <div class="contacts__miniperson-img"><img src="../images/video/person-mini-3.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__miniperson-body">
+                  <div class="contacts__miniperson-name">Никифоров Сергей</div>
+                  <div class="contacts__miniperson-pos">Завскладом</div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#26_smartphone">
+                    </svg>
+                    <a href="tel:+74953696089">+7 (495) 369-60-89</a>
+                  </div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                    </svg>
+                    <a href="mailto:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="contacts__miniperson flex">
+                <div class="contacts__miniperson-img"><img src="../images/video/person-mini-1.jpg" alt="alt" loading="lazy"></div>
+                <div class="contacts__miniperson-body">
+                  <div class="contacts__miniperson-name">Гатальский Иван</div>
+                  <div class="contacts__miniperson-pos">Менеджер по продажам</div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#26_smartphone">
+                    </svg>
+                    <a href="tel:+74953696089">+7 (495) 369-60-89</a>
+                  </div>
+                  <div class="contacts-iconed-item">
+                    <svg class="sprite i-svg svg-contact-icon">
+                      <use xlink:href="../svg/svg/symbols.svg#27_envelope">
+                    </svg>
+                    <a href="mailto:info@pnevmoteh.by">info@pnevmoteh.by</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block contacts__block-bordered" id="contacts__regions">
+          <div class="h4 contacts__block-title">Контакты в регионах</div>
+          <div class="contacts__local">
+            <div class="contacts__local-title">Санкт-Петербург</div>
+            192019, ул. Седова 11а, корп. 2<br> <a href="tel:+78122445411">+7(812)244-54-11</a>
+          </div>
+          <div class="contacts__local">
+            <div class="contacts__local-title">Нижний Новгород</div>
+            603022, ул. Темирязева 15, корп. 2
+          </div>
+        </div><!--.contacts__block-->
+
+        <div class="contacts__block" id="contacts_requisites">
+          <div class="contacts__block-title h4">Наши реквизиты</div>
+          Общество с ограниченной ответственностью ГК «ТехМаш»<br>
+          ИНН / КПП    7724360875 / 772401001<br> 
+          Р/С 40702810138000115440<br>
+          ПАО СБЕРБАНК<br>
+          К/С 30101810400000000225<br>
+          БИК 044525225<br>
+          ОГРН - 1167746373497
+        </div><!--.contacts__block-->
+      </div><!--content-->
+
+      
+    </div>
+  </div>
+</div><!--.content-->
+
+<!--#include file="inc-footer.html"-->

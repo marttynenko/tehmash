@@ -11836,29 +11836,29 @@ a.btn__tooltip{
   max-height: 100%;
 }
 
-.fancybox-wrap{
-  top: 0 !important;
-  height: 100% !important;
-  background: transparent !important;
-  position: fixed !important;
-}
+// .fancybox-wrap{
+//   top: 0 !important;
+//   height: 100% !important;
+//   background: transparent !important;
+//   position: fixed !important;
+// }
 
-.fancybox-skin {
-  background: transparent !important;
-  height: 100% !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-}
+// .fancybox-skin {
+//   background: transparent !important;
+//   height: 100% !important;
+//   -webkit-box-shadow: none !important;
+//   -moz-box-shadow: none !important;
+//   box-shadow: none !important;
+// }
 
 .fancybox-outer{
-  height: 100% !important;
-  padding: 30px 0;
+  // height: 100% !important;
+  // padding: 30px 0;
 }
 
 .fancybox-inner {
   overflow: hidden !important;
-  height: 100% !important;
+  // height: 100% !important;
   display: -webkit-box!important;
   display: -ms-flexbox!important;
   display: flex!important;
@@ -12356,7 +12356,7 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
     }
   }
 
-  .card__complect-result{
+  .card__complect-result:not(.card__complect-result-new){
     height: auto !important;
     margin-top: 60px;
   }
@@ -16894,3 +16894,5 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
     font-size: 17px;
   }
 }
+
+@import "new"
