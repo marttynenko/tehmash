@@ -1,0 +1,40 @@
+.element-invisible {
+  display: none
+}
+.tabs.primary {
+    border-bottom: 1px solid #f1f1f2;
+    margin-bottom: 20px;
+}
+.tabs.primary li {
+    border-right: 1px solid #f1f1f2;
+    display: inline-block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 20px;
+}
+.tabs.primary li:first-child {
+    padding-left: 0;
+}
+.tabs.primary li:last-child {
+    border-right: 0 none;
+}
+.tabs.primary li a {
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+/* Override inline dom styles from modal.js */
+#modalContent {
+  position: fixed !important;
+  top: 12% !important;
+  bottom: 12% !important;
+}
+/* Limit max width to 1000px */
+div.ctools-modal-content {
+  width: 100% !important;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+div.ctools-modal-content .modal-content {
+  width: 100% !important;
+}
