@@ -151,7 +151,7 @@ jQuery(document).ready(function(){
         $('.products__list').toggleClass('view-list');
       }
     },10);
-  });
+  }); 
 
   if(matchMedia) {
 		var screen768 = window.matchMedia('(max-width:768px)');
@@ -160,9 +160,13 @@ jQuery(document).ready(function(){
 	}
 	function changes(screen768) {
 		if(screen768.matches) {
-			$('.cards__filter').appendTo($('.filters-sorting__mobile'));
+      $('.cards__filter').appendTo($('.filters-sorting__mobile'));
+      
+      $('.col-f-phones').prependTo($('.footer__top > .row'))
 		} else {
-			$('.filters-sorting__mobile .cards__filter').appendTo($('.side__box-filters'));
+      $('.filters-sorting__mobile .cards__filter').appendTo($('.side__box-filters'));
+      
+      $('.footer__top .col-f-phones').insertAfter($('.footer__bottom .col-f-wide'));
 		}
   }
   
@@ -255,6 +259,19 @@ jQuery(document).ready(function(){
     }
   }
   
+
+  $('.footer__title.toggled').on('click',function(e){
+    e.preventDefault();
+    $(this).toggleClass('opened');
+    $(this).next().find('ul').slideToggle(200);
+  });
+
+
+  if (document.querySelector('.breadcrumbs') && document.documentElement.clientWidth < 570) {
+    document.querySelector('.breadcrumbs').scrollBy(1000,0);
+  }
+
+  $('.installment-tabs a').tabs();
 
 });
 
