@@ -273,5 +273,37 @@ jQuery(document).ready(function(){
 
   $('.installment-tabs a').tabs();
 
+  //скроллим по якорям и переключаем табы
+  $('.scroll-by-anchors').on('click','a',function(e){
+    e.preventDefault();
+    var $hash = $($(this).attr('href'));
+    if (!$hash.length) return;
+    var $tab = $hash.closest('.installment-tab');
+    
+    if ($tab.length) {
+      if ($tab.is(':visible')) {
+        let $offset = $hash.offset().top;
+        $('html,body').animate({
+          scrollTop: $offset - 60
+        },200);
+      } else {
+        let $tabID = $tab.attr('id');
+        $('.installment-tabs a[href="#'+$tabID+'"]').click();
+        setTimeout(function(){
+          let $offset = $hash.offset().top;
+          $('html,body').animate({
+            scrollTop: $offset - 60
+          },200);
+        },200);
+      }
+    } else {
+      let $offset = $hash.offset().top;
+      $('html,body').animate({
+        scrollTop: $offset - 60
+      },200);
+    }
+    
+  })
+
 });
 
