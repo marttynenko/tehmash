@@ -274,7 +274,7 @@ jQuery(document).ready(function(){
   $('.installment-tabs a').tabs();
 
   //скроллим по якорям и переключаем табы
-  $('.scroll-by-anchors').on('click','a',function(e){
+  /* $('.scroll-by-anchors').on('click','a',function(e){
     e.preventDefault();
     var $hash = $($(this).attr('href'));
     if (!$hash.length) return;
@@ -303,7 +303,238 @@ jQuery(document).ready(function(){
       },200);
     }
     
-  })
+  }) */
+
+  function getHash(href){
+    var str = href.split('#');
+    return '#' + str[1];
+  }
+
+  $(window).on('load', function () {
+    var hash = window.location.hash;
+    if (hash){
+      pt_scroll(hash);
+    }
+  });
+
+  $('.scroll-by-anchors').on('click', 'a', function (e) {
+    e.preventDefault();
+    pt_scroll(getHash($(this).attr('href')));
+  });
+
+  function pt_scroll(hash){
+    var $hash = $(hash);
+    if (!$hash.length) return;
+
+    var $tab = $hash.closest('.installment-tab');
+    if ($tab.length) {
+        if ($tab.is(':visible')) {
+            var $offset = $hash.offset().top;
+            $('html,body').animate({
+                scrollTop: $offset - 60
+            },200);
+        } else {
+            var $tabID = $tab.attr('id');
+            $('.installment-tabs a[href="#'+$tabID+'"]').click();
+            setTimeout(function(){
+                var $offset = $hash.offset().top;
+                $('html,body').animate({
+                    scrollTop: $offset - 60
+                },200);
+            },200);
+        }
+    } else {
+        var $offset = $hash.offset().top;
+        $('html,body').animate({
+            scrollTop: $offset - 60
+        },200);
+    }
+  }
+
+
+  $('input.styler, select.styler').styler();
+
+  $('.slick-consumables').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },{
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.slick-usefulvideo').slick({
+    vertical: true,
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          vertical: false,
+          variableWidth: true,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $(document).on('click','.question-item-title',function(e){
+    e.preventDefault();
+    $(this).toggleClass('opened');
+    $(this).next().toggleClass('opened');
+  });
+
+  $('.slick-usefullarticles').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
+
+  $('.slick-usefullreviews').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          variableWidth: true,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true
+        }
+      }
+    ]
+  });
+
+  //сворачиваемые/разворачиваемы списки с заданным кол-вом
+  //отображаемых элементов для десктопа и мобильного
+  function hideListItems(el,desktopCount,mobileCount,toggler) {
+    if(matchMedia) {
+      var screen768 = window.matchMedia('(max-width:768px)');
+      screen768.addListener(changes768);
+      changes768(screen768);
+    }
+
+    function changes768(screen768) {
+      if(screen768.matches) {
+        $(el).removeClass('more-than-count hidden');
+
+        $(el).each(function(key,item){
+          if (key >= mobileCount) {
+            $(item).addClass('more-than-count hidden');
+          }
+        });
+      } else {
+        $(el).removeClass('more-than-count hidden');
+
+        $(el).each(function(key,item){
+          if (key >= desktopCount) {
+            $(item).addClass('more-than-count hidden');
+          }
+        })
+      }
+    }
+
+    $(document).on('click',toggler,function(e){
+      e.preventDefault();
+      $(el+'.more-than-count').toggleClass('hidden');
+    });
+  }
+
+  hideListItems('.manufacter-item',15,6,'.manufacers-list-toggler');
+
+  $('.slick-additional').slick({
+    infinite: false,
+    slidesToShow:5,
+    slidesToScroll:5,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow:4,
+          slidesToScroll:4
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          slidesToShow:3,
+          slidesToScroll:3
+        }
+      }, {
+        breakpoint: 576,
+        settings: {
+          slidesToShow:2,
+          slidesToScroll:2
+        }
+      }
+    ]
+  });
+
+  $('.header__menu-links li').each(function(key,item){
+    if($(item).find('ul').length) {
+      $(item).addClass('childs-in');
+    }
+  });
 
 });
 

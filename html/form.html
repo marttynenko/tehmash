@@ -1,0 +1,37 @@
+<!--#include file="./inc-header.html"-->
+
+<div class="content">
+  <div class="container">
+    
+    <div class="form-page blue-page">
+      <div class="form-page-inner">
+        <h2 class="form-page-title">Заполните форму</h2>
+        <div class="form-page-aftertitle">Все поля обязательны для заполнения</div>
+        
+        <div class="form-page-fields">
+          <form action="">
+            <div class="ui-field">
+              <select name="f_document" id="" data-placeholder="Вид документа, удостоверяющего личность*" class="ui-input ui-input-big styler">
+                <option value="1">Паспорт</option>
+                <option value="2">Вид на жительство</option>
+                <option value="3">Еще вариант</option>
+              </select>
+            </div>
+            <div class="ui-field">
+              <textarea name="f_numer" id="" rows="4" placeholder="Серия и Номер документа*" class="ui-input ui-input-big"></textarea>
+            </div>
+            <div class="ui-field">
+              <input type="email" name="f_email" id="" class="ui-input ui-input-big" placeholder="E-mail*">
+            </div>
+            <button class="ui-btn ui-btn-block ui-btn-extra ui-btn-radius"><svg class="sprite svg-paperplane"><use xlink:href="../svg/svg/symbols.svg#paper-plane"/></svg> Отправить</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="form-page-bg"><img src="../images/redesign/hr.png" srcset="../images/redesign/hr@2x.png" alt="super girl" loading="lazy"></div>
+    </div><!--.form-->
+
+  </div>
+</div>
+
+<!--#include file="inc-footer-dark.html"-->
