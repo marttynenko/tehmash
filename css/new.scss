@@ -102,29 +102,84 @@ a {
 .sticker {
   display: inline-block;
   vertical-align: middle;
-  height: 26px;
-  line-height: 26px;
-  padding: 0px 12px;
+  height: 24px;
+  line-height: 22px;
+  padding: 0px 10px;
   font-weight: 600;
   font-size: 13px;
+  -ms-border-radius: 4px;
+  border: 1px solid $c_yellow;
+  background: $c_yellow;
+  border-radius: 4px;
   color: #FFF;
+  cursor: default;
 
   svg.sprite {
     fill: #FFF;
     width: 14px;
+    height: 14px;
   }
-  &-yellow {
-    background: $c_yellow;
+  &.bordered {
+    color: $c_yellow;
   }
-  &-gray {
+  &.gray {
     background: #a4a4a4;
+    border-color: #a4a4a4;
+
+    &.bordered {
+      color:#CCC;
+    }
   }
-  &-green {
-    background: #3cdc3c;
+  &.green {
+    background: #0CB872;
+    border-color: #0CB872;
+    
+    &.bordered {
+      color: #0CB872;
+    }
   }
-  &-red {
-    background: #f53b3b;
+  &.red {
+    background: #E42238;
+    border-color: #E42238;
+
+    &.bordered {
+      color: #E42238;
+    }
   }
+  &.orange {
+    background: #FF8C00;
+    border-color: #FF8C00;
+
+    &.bordered {
+      color: #FF8C00;
+    }
+  }
+  &.blue {
+    background: $c_primary;
+    border-color: $c_primary;
+
+    &.bordered {
+      color: $c_primary;
+    }
+  }
+  &.darkblue {
+    background: $c_secondary;
+    border-color: $c_secondary;
+
+    &.bordered {
+      color: $c_secondary;
+    }
+  }
+  &.bordered {
+    background: #FFF;
+  }
+}
+.card__stickers {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 150px;
+  z-index: 2;
 }
 .slick-prev,
 .slick-next,
@@ -1800,11 +1855,32 @@ svg.svg-card-print {
   height: 22px;
   margin-right: 1px;
 }
-.card__header-print {
+.card__header {
+  padding-right: 240px;
+  margin-bottom: 20px;
+}
+.card__header-right {
   position: absolute;
   right: 0;
   bottom: 1px;
   font-size: 13px;
+  text-align: right;
+
+  a {
+    margin-left: 20px;
+
+    &.added {
+      color: #7d7d7d;
+
+      svg {
+        fill: #7d7d7d;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
 .card__header-code {
   display: inline-block;
@@ -1818,7 +1894,7 @@ svg.svg-card-print {
   }
 }
 .card__variants {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 12px;
 
   &-title {
@@ -1988,7 +2064,6 @@ svg.svg-card-print {
   right: 0;
   top: 100%;
   background: #FFF;
-  padding: 20px;
   z-index: 99;
   box-shadow: 0px 3px 15px -2px rgba(0, 0, 0, 0.25);
   visibility: hidden;
@@ -2018,25 +2093,11 @@ svg.svg-card-print {
     margin-bottom: 2px;
   }
 }
-.card__stickers {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0;
-  z-index: 1;
-  width: 130px;
-}
 .card__media {
   &-vertical {
     padding-left: 0;
-    // padding-bottom: 150px;
 
     .card__prevs {
-      // position: absolute;
-      // left: 15px;
-      // right: 15px;
-      // bottom: 70px;
-      // top: auto;
       position: relative;
       left: auto;
       right: auto;
@@ -2073,17 +2134,16 @@ svg.svg-card-print {
   a {
     display: inline-block;
     margin-right: 38px;
-    font-size: 20px;
-    font-weight: 600;
-    border-bottom: 2px solid rgba(0,0,0,0);
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
 
     &:hover {
-      border-bottom-color: $c_primary;
-      color: $c_primary;
+      color: #000;
     }
     &.selected, &.active {
       color: #000;
-      border-bottom-color: #000;
+      font-weight: 700;
     }
   }
 }
@@ -2128,7 +2188,7 @@ svg.svg-card-print {
   padding: 25px 25px 18px;
   margin-bottom: 25px;
   font-size: 13px;
-  background: #edf5f8;
+  border: 1px solid $c_border;
   color: #252525;
   position: relative;
 
@@ -2159,41 +2219,58 @@ svg.svg-card-print {
       color: #252525;
     }
   }
+  &-gallery {
+    padding-top: 10px;
+  }
   &:after {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 14px;
-    right: 20px;
-    bottom: -14px;
-    background: url(../images/video/rev-angle.png) center no-repeat;
+    // content: "";
+    // position: absolute;
+    // width: 22px;
+    // height: 14px;
+    // right: 20px;
+    // bottom: -14px;
+    // background: url(../images/video/rev-angle.png) center no-repeat;
   }
   &-positive {
-    background: #ecf5e8;
+    //background: #ecf5e8;
 
     .review__item-rate {
       color: #63c068;
     }
     &:after {
-      right: auto;
-      left: 20px;
-      background: url(../images/video/rev-positive-angle.png) center no-repeat;
+      // right: auto;
+      // left: 20px;
+      // background: url(../images/video/rev-positive-angle.png) center no-repeat;
     }
   }
   &-negative {
-    background: #f5f5f5;
+    //background: #f5f5f5;
 
     .review__item-rate {
       color: #f1484b;
     }
     &:after {
-      right: auto;
-      left: 20px;
-      background: url(../images/video/rev-negative-angle.png) center no-repeat;
+      // right: auto;
+      // left: 20px;
+      // background: url(../images/video/rev-negative-angle.png) center no-repeat;
     }
   }
   &-answer {
     margin-left: 50px;
+    background: #edf5f8;
+    border: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 0 20px;
+      border-color: transparent transparent transparent #edf5f8;
+    }
   }
 }
 .svg-review-icon {
@@ -2849,7 +2926,7 @@ CARDS
   position: relative;
   z-index: 1;
   border: 1px solid $c_border;
-  height: 405px;
+  height: 385px;
   overflow: hidden;
   margin-right: -1px;
   margin-bottom: -1px;
@@ -2889,6 +2966,13 @@ CARDS
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 5px;
+
+    @media (min-width: 769px) {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
     span {
       font-weight: 600;
       color: #000;

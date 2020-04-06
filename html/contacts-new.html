@@ -16,6 +16,7 @@
             <li><a href="#contacts__team">Наши сотрудники</a></li>
             <li><a href="#contacts__regions">Контакты в регионах</a></li>
             <li><a href="#contacts_requisites">Реквизиты</a></li>
+            <li><a href="#contacts_representations">Представительства</a></li>
           </ul>
         </div>
       </div><!--sidebar-->
@@ -233,7 +234,7 @@
           </div>
         </div><!--.contacts__block-->
 
-        <div class="contacts__block" id="contacts_requisites">
+        <div class="contacts__block contacts__block-bordered" id="contacts_requisites">
           <div class="contacts__block-title h4">Наши реквизиты</div>
           Общество с ограниченной ответственностью ГК «ТехМаш»<br>
           ИНН / КПП    7724360875 / 772401001<br> 
@@ -243,6 +244,188 @@
           БИК 044525225<br>
           ОГРН - 1167746373497
         </div><!--.contacts__block-->
+
+        <div class="contacts__block contacts-representations"  id="contacts_representations">
+          <div class="h4 contacts__block-title">Представитьства</div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="representation-item">
+                <div class="representation-item-flag"><img src="../images/redesign/flag-by.svg" alt="alt"></div>
+                <div class="representation-item-title">Беларусь</div>
+                <p><a href="www.pnevmoteh.by">www.pnevmoteh.by</a></p>
+                <p>г. Минск, ул. Скрыганова, 4Д, пом. 424</p>
+                <div class="representation-item-phone">
+                  <a href="tel:+375293547887" >+375 (29) 354-78-87</a>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+                  </svg>
+                </div>
+              </div>
+
+              <div class="representation-item">
+                <div class="representation-item-flag"><img src="../images/redesign/flag-kz.svg" alt="alt"></div>
+                <div class="representation-item-title">Казахстан</div>
+                <p><a href="www.pnevmoteh.by">www.pnevmoteh.by</a></p>
+                <p>г. Минск, ул. Скрыганова, 4Д, пом. 424</p>
+                <div class="representation-item-phone">
+                  <a href="tel:+375293547887" >+375 (29) 354-78-87</a>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+                  </svg>
+                </div>
+              </div>
+
+              <div class="representation-item">
+                <div class="representation-item-flag"><img src="../images/redesign/flag-ar.svg" alt="alt"></div>
+                <div class="representation-item-title">Армения</div>
+                <p><a href="www.pnevmoteh.by">www.pnevmoteh.by</a></p>
+                <p>г. Минск, ул. Скрыганова, 4Д, пом. 424</p>
+                <div class="representation-item-phone">
+                  <a href="tel:+375293547887" >+375 (29) 354-78-87</a>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                </div>
+              </div>
+            </div><!--.col-->
+
+            <div class="col-sm-6">
+              <div class="representation-item">
+                <div class="representation-item-flag"><img src="../images/redesign/flag-ru.svg" alt="alt"></div>
+                <div class="representation-item-title">Россия</div>
+                <p><a href="www.pnevmoteh.by">www.pnevmoteh.by</a></p>
+                <p>г. Минск, ул. Скрыганова, 4Д, пом. 424</p>
+                <div class="representation-item-phone">
+                  <a href="tel:+375293547887" >+375 (29) 354-78-87</a>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#33_wtsapp">
+                  </svg>
+                </div>
+              </div>
+
+              <div class="representation-item">
+                <div class="representation-item-flag"><img src="../images/redesign/flag-kr.svg" alt="alt"></div>
+                <div class="representation-item-title">Кыргызстан</div>
+                <p><a href="www.pnevmoteh.by">www.pnevmoteh.by</a></p>
+                <p>г. Минск, ул. Скрыганова, 4Д, пом. 424</p>
+                <div class="representation-item-phone">
+                  <a href="tel:+375293547887" >+375 (29) 354-78-87</a>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#31_viber">
+                  </svg>
+                  <svg class="sprite svg-messenger-mini">
+                    <use xlink:href="../svg/svg/symbols.svg#32_telegram">
+                  </svg>
+                </div>
+              </div>
+            </div><!--.col-->
+          </div><!--.row-->
+        </div><!--.representations-->
+        
+        <div class="representations-map" id="representations_map"></div>
+        <script>
+          window.onload = function(){
+            var script = document.createElement('script');
+            script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+            document.body.appendChild(script);
+      
+            script.onload = function(){
+              ymaps.ready(function () {
+                var myMap = new ymaps.Map("representations_map", {
+                  center: [48.146877, 50.486470],
+                  zoom: 3,
+                  controls: ['zoomControl', 'typeSelector',  'fullscreenControl']
+                });
+      
+                minsk = new ymaps.Placemark([53.909344, 27.520922], {
+                    hintContent: 'Беларусское представитьство',
+                    balloonContent: 'г. Минск, ул. Скрыганова, 4Д'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/redesign/map-marker.svg',
+                    iconImageSize: [40, 50],
+                    iconImageOffset: [-20, -50]
+                });
+                myMap.geoObjects.add(minsk);// Размещение геообъекта на карте.	
+
+                astana = new ymaps.Placemark([51.711124, 71.404737], {
+                    hintContent: 'Казахское представитьство',
+                    balloonContent: 'Адресс представительства'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/redesign/map-marker.svg',
+                    iconImageSize: [40, 50],
+                    iconImageOffset: [-20, -50]
+                });
+                myMap.geoObjects.add(astana);
+
+                moscow = new ymaps.Placemark([55.720472, 37.650126], {
+                    hintContent: 'Российское представитьство',
+                    balloonContent: 'Адресс представительства'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/redesign/map-marker.svg',
+                    iconImageSize: [40, 50],
+                    iconImageOffset: [-20, -50]
+                });
+                myMap.geoObjects.add(moscow);
+
+                erevan = new ymaps.Placemark([40.263324, 44.463841], {
+                    hintContent: 'Армянское представитьство',
+                    balloonContent: 'Адресс представительства'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/redesign/map-marker.svg',
+                    iconImageSize: [40, 50],
+                    iconImageOffset: [-20, -50]
+                });
+                myMap.geoObjects.add(erevan);
+
+                kr = new ymaps.Placemark([41.968775, 74.927574], {
+                    hintContent: 'Кыргызское представитьство',
+                    balloonContent: 'Адресс представительства'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/redesign/map-marker.svg',
+                    iconImageSize: [40, 50],
+                    iconImageOffset: [-20, -50]
+                });
+                myMap.geoObjects.add(kr);
+      
+                //отрубаем скролл карты мышью
+                myMap.behaviors.disable('scrollZoom');
+                myMap.container.events.add('fullscreenenter', function(){
+                  myMap.behaviors.enable(['scrollZoom']);
+                });
+                myMap.container.events.add('fullscreenexit', function(){
+                  myMap.behaviors.disable(['scrollZoom']);
+                });
+              });
+            }
+          }
+          </script>
       </div><!--content-->
 
       

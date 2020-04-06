@@ -1,5 +1,21 @@
-jQuery(document).ready(function(){
+//lazy load для сторонних либ
+function lazyLibraryLoad(scriptSrc,linkHref,callback) {
+  let script = document.createElement('script');
+  script.src = scriptSrc;
+  document.querySelector('script[src*="main_new.js"]').before(script);
 
+  if (linkHref !== '') {
+    let style = document.createElement('link');
+    style.href = linkHref;
+    style.rel = 'stylesheet';
+    document.querySelector('link[href*="style.css"]').before(style);
+  }
+
+  script.onload = callback
+}
+
+
+jQuery(document).ready(function(){
 
   var cardComplSlick = $('.card__complect-slick');
   if (cardComplSlick.find('.card__complect-slide').length > 1) {
@@ -120,6 +136,11 @@ jQuery(document).ready(function(){
 
   $(document).on('click','.header__mobile-mtoggler',function(e){
     $('.mobile__menu-overlay').toggleClass('opened');
+  });
+  $(document).on('click','.mobile__menu-overlay',function(e){
+    $(this).removeClass('opened');
+    $('.header__mobile-mtoggler').removeClass('active');
+    $('.mobile__menu').removeClass('opened');
   });
 
   if ( $('.cards__filter-sticky').length ) {
@@ -272,38 +293,6 @@ jQuery(document).ready(function(){
   }
 
   $('.installment-tabs a').tabs();
-
-  //скроллим по якорям и переключаем табы
-  /* $('.scroll-by-anchors').on('click','a',function(e){
-    e.preventDefault();
-    var $hash = $($(this).attr('href'));
-    if (!$hash.length) return;
-    var $tab = $hash.closest('.installment-tab');
-    
-    if ($tab.length) {
-      if ($tab.is(':visible')) {
-        let $offset = $hash.offset().top;
-        $('html,body').animate({
-          scrollTop: $offset - 60
-        },200);
-      } else {
-        let $tabID = $tab.attr('id');
-        $('.installment-tabs a[href="#'+$tabID+'"]').click();
-        setTimeout(function(){
-          let $offset = $hash.offset().top;
-          $('html,body').animate({
-            scrollTop: $offset - 60
-          },200);
-        },200);
-      }
-    } else {
-      let $offset = $hash.offset().top;
-      $('html,body').animate({
-        scrollTop: $offset - 60
-      },200);
-    }
-    
-  }) */
 
   function getHash(href){
     var str = href.split('#');
@@ -536,5 +525,398 @@ jQuery(document).ready(function(){
     }
   });
 
+  $('.slick-producers').slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      }, {
+        breakpoint: 576,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
+  });
+
+  $('.slick-clients').slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 576,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
+  });
+
+
+  $('.slick-homevideos').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          // arrows: true
+        }
+      }, {
+        breakpoint: 576,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true
+        }
+      }
+    ]
+  })
+
+  $('.mobile-catalog-link.all').on('click',function(e){
+    e.preventDefault();
+    $('.header__mobile-mtoggler').click();
+  });
+
+  //вешаем слик, создаем превьюшки, связываем карусель с превьюшками
+  if ($('.slick-card-slide').length > 1) {
+    $('.card__imgs').addClass('padding').append('<div class="card__imgs-previews"></div>');
+
+    $('.slick-card-slide').each(function(key,item){
+      let link = $(item).find('a').clone();
+      link.attr('href','javascript:void(0)');
+      link.addClass('card__imgs-preview');
+      if (key === 0) {
+        link.addClass('active');
+      }
+      $('.card__imgs-previews').append(link);
+    });
+
+    const slickCard = $('.slick-card');
+    slickCard.slick({
+      infinite: false,
+      slidesToShow: 1
+    });
+
+    $(document).on('click','.card__imgs-preview',function(e){
+      e.preventDefault();
+      const index = $(this).index();
+      $('.card__imgs-preview').removeClass('active')
+      $(this).addClass('active');
+      slickCard.slick('slickGoTo',index);
+    })
+
+    slickCard.on('afterChange',function(slick,currentSlide){
+      const index = currentSlide.currentSlide;
+      $('.card__imgs-preview').removeClass('active');
+      $('.card__imgs-preview').eq(index).addClass('active');
+    });
+  }//if end
+  
+
+  $('.uploader').each(function(key,item){
+    $(item).attr('data-index',key+1);
+  })
+
+
+  //добавляем файлы во временное хранилище + предпросмотр
+  $(document).on('change','.uploader-photos input',function(e){
+    filesToStore(this,e,'.uploader-files-preview');
+  });
+
+  //удаляем файлы из временного храилища
+  $(document).on('click','.file-preview-remove',function(e){
+    e.preventDefault();
+    let storeIndex = $(this).data('store');
+    let fileIndex = $(this).parent().index();
+    removeFileFromStore(fileIndex,storeIndex);
+    $(this).parent().remove();
+  });
+
+  //предпросмотр загружаемых видео
+  $(document).on("change", ".uploader-video input", function(evt) {
+    var $source = $('#preview_video');
+    $source[0].src = URL.createObjectURL(this.files[0]);
+    $source.parent()[0].load();
+    $source.closest('.uploader-video-preview').addClass('load');
+  });
+
+
+  //стоимость/кол-во товаров
+  $(document).on('click','.ui-price-plus',function(e){
+    let parent = $(this).closest('.ui-price');
+    let step = +parent.attr('data-step') || 1;
+    let price = +parent.attr('data-price');
+    let current = parseInt((parent.find('input.ui-price-input').val() || 1),10);
+    const input = parent.find('input.ui-price-input');
+    const totalEl = parent.find('.ui-price-total');
+    const pack = parent.attr('data-pack') || '';
+    const packEl = parent.find('.ui-price-total-pack');
+
+    const isCard = (parent.closest('.card__right').length) ? true : false;
+    const panelTotalEl = $('.spy-new .ui-price-total');
+    const panelPackEl = $('.spy-new .ui-price-total-pack');
+
+    let newValue = current + step;
+    let total = (price * newValue).toFixed(2);
+  
+    //форматируем цену
+    let totalParts = total.split('.');
+    if (totalParts[1] === '00') {
+      total = parseInt(total,10)
+    }
+    
+    totalEl.text(total);
+    input.val(newValue);
+
+    //если это карточка товара - меняем и цены в нижней панели
+    if (isCard) { panelTotalEl.text(total) }
+
+    if (pack === 'yes') {
+      packEl.text((newValue/step)+' ');
+
+      if (isCard) { panelPackEl.text((newValue/step)+' ') }
+    }
+  });
+  $(document).on('click','.ui-price-minus',function(e){
+    let parent = $(this).closest('.ui-price');
+    let step = +parent.attr('data-step') || 1;
+    let price = +parent.attr('data-price');
+    let current = parseInt((parent.find('input.ui-price-input').val() || 1),10);
+    const input = parent.find('input.ui-price-input');
+    const totalEl = parent.find('.ui-price-total');
+    const pack = parent.attr('data-pack') || '';
+    const packEl = parent.find('.ui-price-total-pack');
+    
+    const isCard = (parent.closest('.card__right').length) ? true : false;
+    const panelTotalEl = $('.spy-new .ui-price-total');
+    const panelPackEl = $('.spy-new .ui-price-total-pack');
+
+    let newValue = current - step;
+    if(newValue < 1) {return false;}
+    let total = (price * newValue).toFixed(2);
+    
+    //форматируем цену
+    let totalParts = total.split('.');
+    if (totalParts[1] === '00') {
+      total = parseInt(total,10)
+    }
+    
+    totalEl.text(total);
+    input.val(newValue);
+
+    //если это карточка товара - меняем и цены в нижней панели
+    if (isCard) { panelTotalEl.text(total) }
+
+    if (pack === 'yes') {
+      packEl.text((newValue/step)+' ');
+
+      if (isCard) { panelPackEl.text((newValue/step)+' ') }
+    }
+  });
+
+  //инициализируем magnificPopup для попап окон
+  function magnificPopupInit() {
+    $('.mfp-video').magnificPopup({
+      type: 'iframe',
+      mainClass: 'magnific-video',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    });
+    $(document).on('click','.ajax-mfp',function(){
+      var a = $(this);
+      $.magnificPopup.open({
+        items: { src: a.attr('data-href') },
+        type: 'ajax',    
+        overflowY: 'scroll',
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in',
+        ajax: {
+          tError: 'Ошибка. <a href="%url%">Контент</a> не может быть загружен',
+        },
+        callbacks: {
+          open: function () {
+            setTimeout(function(){
+              $('.mfp-wrap').addClass('not_delay');
+              $('.white-popup').addClass('not_delay');
+            },700);
+          }
+        }
+      });
+      return false;
+    });
+  }
+
+  //инициализируем lightgallery
+  function lightgalleryInit() {
+    $('.popup-gallery').each(function(key,item){
+      $(item).attr('id','popup-gallery-'+(key+1));
+  
+      $('#popup-gallery-'+(key+1)).lightGallery({
+        thumbnail:true,
+        thumbWidth: 120,
+        thumbMargin: 15,
+        currentPagerPosition: 'middle',
+        selector: 'a',
+        enableDrag: false,
+        download: false,
+        share: false,
+        getCaptionFromTitleOrAlt:false,
+        hash: false
+      });
+    });
+  }
+
+  //лениво "тянем" и инициализируем магнифик
+  if ($('.ajax-mfp').length || $('.mfp-video').length) {
+    lazyLibraryLoad(
+      'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css',
+      magnificPopupInit
+    );
+  }
+
+  //лениво "тянем" и инициализируем lightgallery
+  if ($('.popup-gallery').length) {
+    lazyLibraryLoad(
+      'https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js',
+      'https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css',
+      lightgalleryInit
+    );
+  }
+
+  $(document).on('click','a.scrollToHash',function(e){
+    var hash = $(this).attr('href');
+    if($(hash).length) {
+      e.preventDefault();
+      let offset = $(hash).offset().top;
+      $('html,body').animate({
+        scrollTop:offset-40
+      },300);
+    }
+  });
+
 });
+
+
+//глобавльное временное хранилище файлов
+const TempStore = {}
+
+/*если надо послать файлы на сервер, формируем FormData с файлами*/
+/*const formData = getFilesFormData(Store.files);*/
+function getFilesFormData(files) {
+  const formData = new FormData();
+  files.map((file, index) => {
+      formData.append(`file${index + 1}`, file);
+  });
+  return formData;
+}
+
+/*добавляем файлы в общую кучу*/
+// function addFiles(files) {
+//   TempStore.files = TempStore.files.concat(files);
+// }
+function addFilesToStore(files,id) {
+  if ($('.uploader-photos').length > 1) {
+    let $name = 'files'+id;
+    if (typeof TempStore[$name] === 'undefined') {
+      TempStore[$name] = [];
+    }
+    TempStore[$name] = TempStore[$name].concat(files);
+  } else {
+    TempStore.files = [];
+    TempStore.files = TempStore.files.concat(files);
+  }
+}
+
+/*удаляем файл из хранилища*/
+function removeFileFromStore(index,id) {
+  //TempStore.files.splice(index, 1);
+  if ($('.uploader').length > 1) {
+    let $name = 'files'+id;
+    TempStore[$name].splice(index, 1);
+  } else {
+    TempStore.files.splice(index, 1);
+  }
+}
+
+function filesToStore(input, e, previews) {
+  var id = $(input).parent('.uploader').attr('data-index');
+  // если не выбрали файл и нажали отмену, то ничего не делать
+  if (!e.target.files.length) {
+    return;
+  }
+  // создаем новый массив с нашими файлами
+  const files = $.map(Object.keys(e.target.files), function(i) {
+    //console.log(e.target.files[i].name);
+    return e.target.files[i];
+  });
+  filesStorePreview(e, input, files, id, previews);
+  addFilesToStore(files, id); //добавляем файлы в хранилище
+
+  // очищаем input, т.к. файл мы сохранили
+   e.target.value = '';
+}
+
+function filesStorePreview (e,input,files,id,previews) {
+  let block = $(previews);
+
+  for (let i = 0; i < files.length; i++) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      let span = document.createElement('span');
+      let image = document.createElement('img');
+      let icon = document.createElement('i');
+      span.setAttribute('class','file-preview');
+      // span.innerHTML = '<span>'+files[i].name+'</span>';
+      image.setAttribute('src',e.target.result);
+      icon.setAttribute('class','file-preview-remove');
+      icon.setAttribute('data-store',id);
+      span.appendChild(icon);
+      span.appendChild(image);
+
+      block.append(span);
+    }
+    
+    reader.readAsDataURL(files[i]);
+  }//for
+}
 

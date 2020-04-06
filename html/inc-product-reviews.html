@@ -57,7 +57,7 @@
                   <input type="hidden" name="vote">
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12 form__field form__field-margin">
+              <div class="col-lg-6 col-md-6 form__field">
                 <div class="field__custom">
                   <div class="field__custom-label">
                     Ваше имя <span>*</span>
@@ -65,7 +65,7 @@
                   <input type="text" name="">
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12 form__field">
+              <div class="col-lg-6 col-md-6 form__field">
                 <div class="field__custom">
                   <div class="field__custom-label">
                     Email <span>*</span>
@@ -81,6 +81,43 @@
                   <textarea></textarea>
                 </div>
               </div>
+
+              <div class="col-md-4 col-6 form__field">
+                <div class="uploader uploader-photos">
+                  <div class="uploader-btn">
+                    <div class="uploader-btn-icon"></div>
+                    <div class="uploader-btn-txt">Добавить фото</div>
+                  </div>
+                  <input class="uploader-input" type="file" name="" id="" accept=".jpg,.jpeg,.png" multiple>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-6 form__field">
+                <div class="uploader uploader-video">
+                  <div class="uploader-btn">
+                    <div class="uploader-btn-icon"></div>
+                    <div class="uploader-btn-txt">Добавить видео</div>
+                  </div>
+                  <input class="uploader-input" type="file" name="" id="" accept="video/*" max>
+                </div>
+              </div>
+
+              <div class="col-md-4 form__field">
+                <div class="uploader uploader-youtube">
+                  <div class="uploader-btn-icon"></div>
+                  <input type="text" name="" id="" placeholder="URL видео с YouTube">
+                </div>
+              </div>
+
+              <div class="col-12 col-files-preview">
+                <div class="uploader-files-preview"></div>
+                <div class="uploader-video-preview">
+                  <video width="122">
+                    <source src="#" id="preview_video">
+                  </video>
+                </div>
+              </div>
+
               <div class="col-lg-6 col-md-6 col-sm-6 col-12 form__field">
                 <div class="field__custom field__custom-green">
                   <div class="field__custom-label">
@@ -231,6 +268,15 @@
                 и грешил на некачественную сталь пилок). И выявляется косяк только после продолжительной работы. </div>
             <div class="review__item-keys"><span class="review__item-keys-label">Преимущества:</span> Нет</div>
             <div class="review__item-keys"><span class="review__item-keys-label">Недостатки:</span> Кофе не варит!</div>
+
+            <div class="review__item-gallery popup-gallery">
+              <a href="../images/card__big.jpg" class="gallery-item">
+                <img loading="lazy" src="../images/redesign/additional-1.jpg" alt="alt">
+              </a>
+              <a href="https://www.youtube.com/watch?v=Ox8D-KREzvk" class="gallery-item video">
+                <img loading="lazy" src="../images/redesign/additional-2.jpg" alt="alt">
+              </a>
+            </div>
           </div><!--.review__item-->
 
 

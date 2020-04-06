@@ -437,11 +437,11 @@ jQuery(document).ready(function () {
     });
 
     jQuery(document).on('click', '.consumables__filter a', function () {
-        var parent = jQuery(this).closest('li');
+        var that = jQuery(this);
 
-        if(!parent.hasClass('active')){
-            jQuery('.consumables__filter li').removeClass('active');
-            parent.addClass('active');
+        if(!that.hasClass('active')){
+            jQuery('.consumables__filter a').removeClass('active');
+            that.addClass('active');
             jQuery('.consumables__slider').slick('slickUnfilter');
             jQuery('.consumables__slider').slick('slickFilter', jQuery(this).data('filter'));
             if(jQuery(window).width() < 576){
@@ -569,19 +569,26 @@ jQuery(document).ready(function () {
                     prevArrow: this.element.attr('href') + ' .consumables__list .slide__prev',
                     nextArrow: this.element.attr('href') + ' .consumables__list .slide__next',
                     infinite: true,
-                    slidesToShow: 4,
+                    slidesToShow: 5,
                     swipeToSlide: true,
-                    slidesToScroll: 4,
+                    slidesToScroll: 5,
                     responsive: [
                         {
                             breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 4
+                            }
+                        },
+                        {
+                            breakpoint: 992,
                             settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 3
                             }
                         },
                         {
-                            breakpoint: 992,
+                            breakpoint: 768,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 2
@@ -778,23 +785,28 @@ jQuery(document).ready(function () {
     if(jQuery('.content .consumables__slider').length){
         jQuery('.content .consumables__slider').slick({
             dots: false,
-            prevArrow: '.consumables__list .slide__prev',
-            nextArrow: '.consumables__list .slide__next',
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            infinite: false,
+            slidesToShow: 5,
+            slidesToScroll: 5,
             draggable: false,
             drag: false,
             responsive: [
                 {
                     breakpoint: 1200,
                     settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3
                     }
                 },
                 {
-                    breakpoint: 992,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2

@@ -1,0 +1,79 @@
+<div class="white-popup zoom-anim-dialog popup-one-click">
+  <div class="white-popup-inner">
+    <div class="one-click">
+      <div class="one-click-title">Купить в 1 клик</div>
+
+      <div class="one-click-product">
+        <div class="one-click-product-img">
+          <img src="../images/redesign/additional-3.jpg" alt="alt" loading="lazy">
+        </div>
+        <div class="one-click-product-title">Промышленный рукав ВВ28-КУ7</div>
+      </div>
+
+      <div class="one-click-prices">
+        <div class="ui-price" data-price="7890" data-step="1" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="price" content="7890.00">
+          <meta itemprop="priceCurrency" content="RUB">
+          <link itemprop="availability" href="http://schema.org/InStock">
+
+          <div class="ui-price-col peritem">
+            <div class="ui-price-price">7 890</div>
+          </div><!--.col-->
+
+          <div class="ui-price-col amount">
+            <div class="ui-price-amount">
+              <div class="ui-price-minus"></div>
+              <input type="text" class="ui-price-input" value="1" readonly>
+              <div class="ui-price-amount-unit">шт</div>
+              <div class="ui-price-plus"></div>
+            </div>
+          </div><!--.col-->
+
+          <div class="ui-price-col">
+            <div class="ui-price-total-wrap">
+              <div class="ui-price-total">7 890</div>
+              <div class="ui-price-total-currencys">
+                <div class="ui-price-total-currency">RUB</div>
+                <div class="ui-price-total-nds">НДС</div>
+              </div>
+            </div>
+          </div><!--.col-->
+        </div><!--.ui-price-->
+      </div><!--.prices-->
+
+      <div class="one-click-form">
+        <div class="one-click-field">
+          <div class="one-click-field-label">Ваш мобильный телефон <span class="one-click-req">*</span></div>
+          <input type="tel" class="one-click-input mask-phone">
+        </div>
+        <div class="one-click-field">
+          <div class="one-click-field-label">Ваше имя</div>
+          <input type="text" class="one-click-input">
+        </div>
+        <div class="one-click-field">
+          <div class="one-click-field-label">Ваш email <span class="one-click-req">*</span></div>
+          <input type="email" class="one-click-input mask-phone">
+        </div>
+        <div class="one-click-btns">
+          <button class="btn__custom btn__custom-blue">Оформить заказ</button>
+          <span class="one-click-hint"><span class="one-click-req">*</span> - обязательное для заполнения поле</span>
+        </div>
+        
+      </div>
+    </div><!--.one-click-->
+  </div>
+  <script>
+    jQuery(document).ready(function (){
+      
+      function maskInit() {
+        $('.white-popup .mask-phone').inputmask("+375-(99) 999-99-99");
+      }
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js',
+        '',
+        maskInit
+      );
+      
+    });
+  </script>
+</div>
