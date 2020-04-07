@@ -464,25 +464,6 @@ textarea.ui-input {
     font-size: 14px;
   }
 }
-.sticker {
-  max-width: 100%;
-  
-  &-purple {
-    background: #8145FF;
-  }
-  &-blue {
-    background: #4584FF;
-  }
-  &-yellow-dark {
-    background: #EBAB19;
-  }
-  &-red {
-    background: #E42238;
-  }
-  &-orange {
-    background: #FF6745;
-  }
-}
 
 .products-usefull {
   border: 1px solid $c_border;
@@ -757,6 +738,7 @@ textarea.ui-input {
   }
   &-body {
     a {
+      display: inline-block;
       text-decoration: underline !important;
 
       &:hover {
@@ -949,6 +931,11 @@ textarea.ui-input {
   .usefull-article {
     width: 250px;
     min-height: 415px;
+  }
+  .slick-usefullarticles-slide:last-child {
+    .usefull-article {
+      border-right: 1px solid $c_border;
+    }
   }
   .usefull-review {
     width: 260px;
@@ -1255,10 +1242,16 @@ textarea.ui-input {
 @media (min-width: 769px) {
   .front {
     .pr__card {
-      height: 400px;
-    }
-    .pr__card-title {
-      height: 80px;
+      // height: 400px;
+
+      // &-code {
+      //   position: absolute;
+      //   right: 20px;
+      //   top: 15px;
+      // }
+      &-title {
+        height: 60px;
+      }
     }
   }
 }//769px start
@@ -2315,6 +2308,7 @@ textarea.ui-input {
   .sticker {
     margin-bottom: 7px;
     margin-right: 4px;
+    border-radius: 4px;
   }
 }
 .card__screen {
@@ -2470,11 +2464,16 @@ textarea.ui-input {
   a {
     display: inline-block;
     vertical-align: middle;
-    margin: 0px 25px 5px 0;
-    border-bottom: 1px dotted $c_primary;
-    transition: color .4s, border .4s;
+    margin: 0px 25px 4px 0;
+    padding: 3px 0;
+    transition: color .4s;
 
-    &:hover {
+    span {
+      border-bottom: 1px dotted $c_primary;
+      transition: border .4s;
+    }
+
+    &:hover span {
       border-bottom-color: transparent;
     }
 
@@ -2482,8 +2481,11 @@ textarea.ui-input {
       color: #000;
       background: $c_yellow;
       padding: 3px 12px;
-      border: 0;
       font-weight: 600;
+
+      span {
+        border-bottom-color: transparent;
+      }
     }
   }
 }
@@ -2854,11 +2856,19 @@ textarea.ui-input {
 
 @media (max-width: 768px) {
   .card__header {
-    padding-right: 0;
+    padding-right: 40px;
   }
   .card__header-right {
-    display: none;
-    visibility: hidden;
+    width: 40px;
+    text-align: right;
+
+    .svg-h-compare {
+      margin-right: 0;
+
+      & + span {
+        display: none;
+      }
+    }
   }
   .card__labels {
     position: relative;
@@ -2964,6 +2974,23 @@ textarea.ui-input {
       right: 15px;
     }
   }
+  .producer-item {
+    height: 50px;
+
+    img {
+      max-height: 50px;
+      max-width: 130px;
+    }
+  }
+  .slick-producers:after,
+  .slick-clients:after,
+  .slick-usefullarticles:after,
+  .slick-usefullreviews:after,
+  .slick-usefulvideo:after,
+  .slick-homevideos:after,
+  .mobile-catalog:after {
+    width: 65px;
+  }
 }//576
 @media (max-width: 480px) {
   .installment-offer {
@@ -2998,6 +3025,9 @@ textarea.ui-input {
     .mobile-only {
       display: block;
     }
+    span.mobile-only {
+      display: inline;
+    }
   }
   .spy-new {
     .ui-price-col.total {
@@ -3010,6 +3040,10 @@ textarea.ui-input {
   .card__right-sales {
     margin-left: -15px;
     margin-right: -15px;
+  }
+  .tooltip-circle {
+    display: block;
+    margin: 7px 7px 7px 0;
   }
 }//480px end
 

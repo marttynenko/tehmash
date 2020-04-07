@@ -107,12 +107,12 @@ a {
   padding: 0px 10px;
   font-weight: 600;
   font-size: 13px;
-  -ms-border-radius: 4px;
   border: 1px solid $c_yellow;
   background: $c_yellow;
-  border-radius: 4px;
+  border-radius: 0;
   color: #FFF;
   cursor: default;
+  max-width: 100%;
 
   svg.sprite {
     fill: #FFF;
@@ -122,7 +122,7 @@ a {
   &.bordered {
     color: $c_yellow;
   }
-  &.gray {
+  &.gray, &-gray {
     background: #a4a4a4;
     border-color: #a4a4a4;
 
@@ -130,7 +130,7 @@ a {
       color:#CCC;
     }
   }
-  &.green {
+  &.green, &-green {
     background: #0CB872;
     border-color: #0CB872;
     
@@ -138,7 +138,7 @@ a {
       color: #0CB872;
     }
   }
-  &.red {
+  &.red, &-red {
     background: #E42238;
     border-color: #E42238;
 
@@ -146,7 +146,7 @@ a {
       color: #E42238;
     }
   }
-  &.orange {
+  &.orange, &-orange {
     background: #FF8C00;
     border-color: #FF8C00;
 
@@ -154,7 +154,7 @@ a {
       color: #FF8C00;
     }
   }
-  &.blue {
+  &.blue, &-blue {
     background: $c_primary;
     border-color: $c_primary;
 
@@ -162,12 +162,28 @@ a {
       color: $c_primary;
     }
   }
-  &.darkblue {
+  &.darkblue, &-darkblue {
     background: $c_secondary;
     border-color: $c_secondary;
 
     &.bordered {
       color: $c_secondary;
+    }
+  }
+  &.purple, &-purple {
+    background: #8145FF;
+    border-color: #8145FF;
+
+    &.bordered {
+      color: #8145FF;
+    }
+  }
+  &.yellow-dark, &-yellow-dark {
+    background: #EBAB19;
+    border-color: #EBAB19;
+
+    &.bordered {
+      color: #EBAB19;
     }
   }
   &.bordered {
@@ -621,6 +637,14 @@ header.header {
     -ms-flex: 0 0 calc(100% - 230px);
     flex: 0 0 calc(100% - 230px);
     max-width: calc(100% - 230px);
+    width: 100%;
+  }
+}
+.front {
+  .header__menu-links {
+    -ms-flex: 0 0 calc(100% - 110px);
+    flex: 0 0 calc(100% - 110px);
+    max-width: calc(100% - 110px);
     width: 100%;
   }
 }
@@ -2926,7 +2950,7 @@ CARDS
   position: relative;
   z-index: 1;
   border: 1px solid $c_border;
-  height: 385px;
+  height: 405px;
   overflow: hidden;
   margin-right: -1px;
   margin-bottom: -1px;
@@ -2963,15 +2987,8 @@ CARDS
     margin-bottom: 2px;
   }
   &-code {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     margin-bottom: 5px;
-
-    @media (min-width: 769px) {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-    }
 
     span {
       font-weight: 600;
@@ -2979,8 +2996,7 @@ CARDS
     }
   }
   &-rate {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     margin-bottom: 5px;
     line-height: 1;
 

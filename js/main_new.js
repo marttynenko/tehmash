@@ -128,10 +128,15 @@ jQuery(document).ready(function(){
     }
   });
 
-  $(document).on('click','.childs-toggler',function(e){
+  /* $(document).on('click','.childs-toggler',function(e){
     e.preventDefault();
     $(this).toggleClass('opened');
     $(this).parent().toggleClass('opened').next('ul').slideToggle('fast');
+  }); */
+  $(document).on('click','.mobile__menu .childs-in',function(e){
+    e.preventDefault();
+    $(this).find('.childs-toggler').toggleClass('opened');
+    $(this).toggleClass('opened').next('ul').slideToggle('fast');
   });
 
   $(document).on('click','.header__mobile-mtoggler',function(e){
@@ -393,7 +398,8 @@ jQuery(document).ready(function(){
         settings: {
           vertical: false,
           variableWidth: true,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          slidesToShow: 1
         }
       }
     ]
@@ -419,7 +425,9 @@ jQuery(document).ready(function(){
       }, {
         breakpoint: 992,
         settings: {
-          variableWidth: true
+          variableWidth: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
@@ -441,6 +449,7 @@ jQuery(document).ready(function(){
         breakpoint: 992,
         settings: {
           variableWidth: true,
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       }, {
@@ -830,6 +839,15 @@ jQuery(document).ready(function(){
       $('html,body').animate({
         scrollTop:offset-40
       },300);
+    }
+  });
+
+
+  //скрываем выпадающие рассрочки по клику вне
+  $(document).on('mouseup',function(e){
+    if ($('.card__right-sales').has(e.target).length === 0){
+      $('.card__sale-installment').removeClass('opened');
+      $('.card__sale-installment-drop').removeClass('opened');
     }
   });
 
