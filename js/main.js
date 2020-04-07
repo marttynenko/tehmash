@@ -446,7 +446,7 @@ jQuery(document).ready(function () {
             jQuery('.consumables__slider').slick('slickFilter', jQuery(this).data('filter'));
             if(jQuery(window).width() < 576){
                 jQuery('html, body').stop().animate({
-                    scrollTop : jQuery('.consumables__list').offset().top - 80 +  "px"
+                    scrollTop : jQuery('.consumables__slider').offset().top - 80
                 }, 500);
             }
         }
@@ -595,7 +595,7 @@ jQuery(document).ready(function () {
                             }
                         },
                         {
-                            breakpoint: 360,
+                            breakpoint: 380,
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1
@@ -813,7 +813,7 @@ jQuery(document).ready(function () {
                     }
                 },
                 {
-                    breakpoint: 360,
+                    breakpoint: 380,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
