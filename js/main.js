@@ -954,11 +954,11 @@ function matchHeightUpdate() {
     }
 
     if(jQuery('.card__complect-block').length){
-        setTimeout(function(){
-            jQuery('.card__complect-block').matchHeight({
-                byRow: false
-            });
-        },200)
+        // setTimeout(function(){
+        //     jQuery('.card__complect-block').matchHeight({
+        //         byRow: false
+        //     });
+        // },200)
     }
 
     if(jQuery('.compare__item-top').length){

@@ -2344,47 +2344,24 @@ svg.svg-card-print {
 }
 .card__complect {
 
-  &-goods {
-    flex: 0 0 80%;
-    max-width: 80%;
-  }
-  &-check {
-    padding-left: 15px;
-    padding-right: 15px;
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
   &-slide {
-    padding-left: 15px;
-    padding-right: 15px;
     position: relative;
 
     .card__item-title {
       height: 60px;
       overflow: hidden;
     }
-    &:not(:first-child):before {
-      content: "";
-      right: 100%;
-      background: url(../images/svg/36_nabor_plus.svg) no-repeat;
-      background-size: contain;
-      width: 15px;
-      height: 15px;
-      margin-right: -7px;
-      top: 50%;
-      margin-top: -7px;
-      position: absolute;
-    }
+    
   }
   &-slick {
     .slick-prev {
-      left: 15px;
+      left: 0px;
       top: 60px;
       bottom: auto;
       margin: 0;
     }
     .slick-next {
-      right: 15px;
+      right: 0px;
       top: 60px;
       bottom: auto;
       margin: 0;

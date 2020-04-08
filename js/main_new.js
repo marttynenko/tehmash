@@ -20,29 +20,10 @@ jQuery(document).ready(function(){
   var cardComplSlick = $('.card__complect-slick');
   if (cardComplSlick.find('.card__complect-slide').length > 1) {
     cardComplSlick.slick({
-      slidesToShow: 4,
+      slidesToShow: 1,
       dots: false,
       infinite: false,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 360,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+      adaptiveHeight: true
     });
   }
 
@@ -69,7 +50,7 @@ jQuery(document).ready(function(){
         }
       },
       {
-        breakpoint: 360,
+        breakpoint: 380,
         settings: {
           slidesToShow: 1
         }
