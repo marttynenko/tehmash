@@ -6544,13 +6544,15 @@ textarea.ui-input { height: auto; padding-top: 20px; padding-bottom: 20px; }
 
 .manufacers-list-toggler { display: none; padding-top: 5px; }
 
-.card__opt { position: relative; margin-top: 15px; margin-bottom: 20px; max-height: 340px; overflow-y: auto; }
+.card__opt { position: relative; margin-top: 15px; margin-bottom: 20px; }
 
 .card__opt-toggler { border-bottom: 1px dotted transparent; }
 
 .card__opt-toggler:hover { border-bottom-color: #3290cc; }
 
 .card__opt-drop { position: absolute; z-index: 99; left: 0; width: 300px; bottom: 100%; margin-bottom: 10px; background: #FFFFFF; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); padding: 15px 20px; font-weight: 600; border-radius: 3px; visibility: hidden; opacity: 0; transform: translateY(-10px); transition: visibility .15s, opacity .15s, transform .15s; }
+
+.card__opt-drop-inner { max-height: 360px; overflow-y: auto; margin-right: -10px; padding-right: 10px; }
 
 .card__opt-drop.opened { visibility: visible; opacity: 1; transform: translateY(0px); }
 
