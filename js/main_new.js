@@ -22,8 +22,11 @@ jQuery(document).ready(function(){
     cardComplSlick.slick({
       slidesToShow: 1,
       dots: false,
+      fade: true,
       infinite: false,
-      adaptiveHeight: true
+      adaptiveHeight: true,
+      prevArrow: '<button type="button" class="slick-prev"><span>Предыдущий набор</span></button>',
+      nextArrow: '<button type="button" class="slick-next"><span>Следующий набор</span></button>'
     });
   }
 
@@ -829,6 +832,16 @@ jQuery(document).ready(function(){
     if ($('.card__right-sales').has(e.target).length === 0){
       $('.card__sale-installment').removeClass('opened');
       $('.card__sale-installment-drop').removeClass('opened');
+    }
+  });
+
+
+  $('.card__opt-toggler').on('click',function(){
+    $('.card__opt-drop').toggleClass('opened');
+  })
+  $(document).on('mouseup',function(e){
+    if ($('.card__opt').has(e.target).length === 0){
+      $('.card__opt-drop').removeClass('opened');
     }
   });
 
