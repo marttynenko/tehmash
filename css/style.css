@@ -7071,7 +7071,7 @@ textarea.ui-input { height: auto; padding-top: 20px; padding-bottom: 20px; }
 
 .ui-price-total-wrap { display: -ms-flexbox; display: flex; }
 
-.ui-price-total-currencys { font-size: 12px; padding-left: 8px; }
+.ui-price-total-currencys { font-size: 12px; padding-left: 8px; text-align-last: left; }
 
 .ui-price-total-currency { font-weight: 600; color: #252525; }
 
