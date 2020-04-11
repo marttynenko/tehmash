@@ -5629,7 +5629,13 @@ svg.svg-card-print { width: 22px; height: 22px; margin-right: 1px; }
 
 .svg-card-car { width: 25px; height: 16px; top: -2px; position: relative; }
 
-.card__sale { position: relative; padding: 18px 50px 18px 80px; font-size: 13px; line-height: 1.4; }
+.card__sale { position: relative; font-size: 13px; line-height: 1.4; }
+
+.card__sale-inner { cursor: pointer; padding: 18px 50px 18px 80px; position: relative; }
+
+.card__sale-inner:after { content: ""; position: absolute; right: 25px; top: 0; bottom: 0; margin: auto 0; width: 14px; height: 8px; background: url(../images/svg/16_arrow_down.svg) center no-repeat; transition: transform .15s; cursor: pointer; }
+
+.card__sale-inner.opened:after { transform: rotate(180deg); }
 
 .card__sale-title { font-weight: 700; margin-bottom: 4px; color: #000; }
 
@@ -5639,17 +5645,13 @@ svg.svg-card-print { width: 22px; height: 22px; margin-right: 1px; }
 
 .card__sale-icon { padding-right: 15px; position: absolute; left: 20px; top: 0; bottom: 0; width: 65px; }
 
-.card__sale-video { background: #eaf4fa url(../images/video/dollars-mini.png) right 10px bottom no-repeat; }
+.card__sale-video { background: #eaf4fa url(../images/video/dollars-mini.png) right 10px bottom no-repeat; padding: 18px 50px 18px 80px; }
 
 .card__sale-video .svg-card-video { position: absolute; left: 20px; bottom: 0; width: 54px; height: 70px; }
 
 .card__sale-video .card__sale-icon { position: static; }
 
 .card__sale-installment { background: #fef0c8; cursor: pointer; }
-
-.card__sale-installment:after { content: ""; position: absolute; right: 25px; top: 0; bottom: 0; margin: auto 0; width: 14px; height: 8px; background: url(../images/svg/16_arrow_down.svg) center no-repeat; transition: transform .15s; cursor: pointer; }
-
-.card__sale-installment.opened:after { transform: rotate(180deg); }
 
 .card__sale-price { font-size: 16px; }
 

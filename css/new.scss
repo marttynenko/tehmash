@@ -2012,9 +2012,33 @@ svg.svg-card-print {
 }
 .card__sale {
   position: relative;
-  padding: 18px 50px 18px 80px;
   font-size: 13px;
   line-height: 1.4;
+
+  &-inner {
+    cursor: pointer;
+    padding: 18px 50px 18px 80px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 14px;
+      height: 8px;
+      background: url(../images/svg/16_arrow_down.svg) center no-repeat;
+      transition: transform .15s;
+      cursor: pointer;
+    }
+    &.opened {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
   &-title {
     font-weight: 700;
@@ -2041,6 +2065,7 @@ svg.svg-card-print {
 
   &-video {
     background: #eaf4fa url(../images/video/dollars-mini.png) right 10px bottom no-repeat;
+    padding: 18px 50px 18px 80px;
 
     .svg-card-video {
       position: absolute;
@@ -2056,26 +2081,6 @@ svg.svg-card-print {
   &-installment {
     background: #fef0c8;
     cursor: pointer;
-
-    &:after {
-      content: "";
-      position: absolute;
-      right: 25px;
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
-      width: 14px;
-      height: 8px;
-      background: url(../images/svg/16_arrow_down.svg) center no-repeat;
-      transition: transform .15s;
-      cursor: pointer;
-    }
-    &.opened {
-      &:after {
-        transform: rotate(180deg);
-      }
-    }
-
   }
   &-price {
     font-size: 16px;

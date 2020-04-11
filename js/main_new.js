@@ -830,7 +830,7 @@ jQuery(document).ready(function(){
   //скрываем выпадающие рассрочки по клику вне
   $(document).on('mouseup',function(e){
     if ($('.card__right-sales').has(e.target).length === 0){
-      $('.card__sale-installment').removeClass('opened');
+      $('.card__sale-inner').removeClass('opened');
       $('.card__sale-installment-drop').removeClass('opened');
     }
   });
