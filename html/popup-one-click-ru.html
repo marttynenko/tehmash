@@ -41,30 +41,31 @@
         </div><!--.ui-price-->
       </div><!--.prices-->
 
-      <div class="one-click-form">
-        <div class="one-click-field">
-          <div class="one-click-field-label">Ваш мобильный телефон <span class="one-click-req">*</span></div>
-          <input type="tel" class="one-click-input mask-phone">
+      <form class="one-click-form" id="one_click_form">
+        <div class="white-popup-field">
+          <div class="white-popup-field-label">Ваш мобильный телефон <span class="white-popup-req">*</span></div>
+          <input type="tel" class="white-popup-input mask-phone" name="f_phone" required>
         </div>
-        <div class="one-click-field">
-          <div class="one-click-field-label">Ваше имя</div>
-          <input type="text" class="one-click-input">
+        <div class="white-popup-field">
+          <div class="white-popup-field-label">Ваше имя</div>
+          <input type="text" class="white-popup-input" name="f_name">
         </div>
-        <div class="one-click-field">
-          <div class="one-click-field-label">Ваш email <span class="one-click-req">*</span></div>
-          <input type="email" class="one-click-input mask-phone">
+        <div class="white-popup-field">
+          <div class="white-popup-field-label">Ваш email <span class="white-popup-req">*</span></div>
+          <input type="email" class="white-popup-input mask-phone" name="f_email" required>
         </div>
         <div class="one-click-btns">
           <button class="btn__custom btn__custom-blue">Оформить заказ</button>
-          <span class="one-click-hint"><span class="one-click-req">*</span> - обязательное для заполнения поле</span>
+          <span class="one-click-hint"><span class="white-popup-req">*</span> - обязательное для заполнения поле</span>
         </div>
         
-      </div>
+      </form>
     </div><!--.one-click-->
   </div>
   <script>
     jQuery(document).ready(function (){
       
+      //маска
       function maskInit() {
         $('.white-popup .mask-phone').inputmask("+7 (999) 999-99-99");
       }
@@ -72,6 +73,27 @@
         'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js',
         '',
         maskInit
+      );
+
+
+      //валидируем форму
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js',
+        '',
+        function() {
+          jQueryValidatorDefaults();
+          $('#one_click_form').validate({
+            rules: {
+              f_phone: {
+                telephone: true
+              },
+              f_email: {
+                email: true
+              }
+            },
+            //submitHandler: function(){/*если что-то нужно выполнить после сабмита*/}
+          });
+        }
       );
       
     });

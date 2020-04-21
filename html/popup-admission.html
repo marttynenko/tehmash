@@ -1,0 +1,56 @@
+<div class="white-popup zoom-anim-dialog popup-admission">
+  <div class="white-popup-inner">
+      
+      <h2 class="popup-admission-title">Сообщить о поступлении</h2>
+
+      <p>Мы можем сообщить вам о появлении этого товара снова в продаже. Для этого оставьте свои координаты для связи.</p>
+
+      <form id="admission_form">
+        <div class="white-popup-field">
+          <div class="white-popup-field-label">Ваш мобильный телефон <span class="white-popup-req">*</span></div>
+          <input type="tel" class="white-popup-input mask-phone" name="f_phone" required>
+        </div>
+        <div class="white-popup-field">
+          <div class="white-popup-field-label">Ваш email <span class="white-popup-req">*</span></div>
+          <input type="email" class="white-popup-input mask-phone" name="f_email" required>
+        </div>
+        <div class="white-popup-btns">
+          <button class="btn__custom btn__custom-blue">Сообщить о поступлении</button>
+        </div>
+      </form>
+    
+  </div>
+  <script>
+    jQuery(document).ready(function (){
+      
+      function maskInit() {
+        $('.white-popup .mask-phone').inputmask("+375 (99) 999-99-99");
+      }
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js',
+        '',
+        maskInit
+      );
+
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js',
+        '',
+        function() {
+          jQueryValidatorDefaults();
+          $('#admission_form').validate({
+            rules: {
+              f_phone: {
+                telephone: true
+              },
+              f_email: {
+                email: true
+              }
+            },
+            //submitHandler: function(){/*если что-то нужно выполнить после сабмита*/}
+          });
+        }
+      );
+      
+    });
+  </script>
+</div>

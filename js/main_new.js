@@ -108,7 +108,12 @@ jQuery(document).ready(function(){
 
   $('.mobile__menu-catalog li').each(function(key,item){
     if($(item).find('ul').length) {
-      $(item).children('a').addClass('childs-in').append('<i class="childs-toggler" onclick=""></i>');
+      let link = $(item).children('a');
+      let href = link.attr('href');
+      let ul = link.next('ul');
+
+      link.addClass('childs-in').append('<i class="childs-toggler" onclick=""></i>');
+      ul.prepend('<li class="to-main-category"><a href="'+href+'">Перейти к разделу</a></li>');
     }
   });
 
@@ -766,10 +771,14 @@ jQuery(document).ready(function(){
         },
         callbacks: {
           open: function () {
+            $('html').addClass('mfp-open');
             setTimeout(function(){
               $('.mfp-wrap').addClass('not_delay');
               $('.white-popup').addClass('not_delay');
             },700);
+          },
+          close: function() {
+            $('html').removeClass('mfp-open');
           }
         }
       });
@@ -844,6 +853,21 @@ jQuery(document).ready(function(){
       $('.card__opt-drop').removeClass('opened');
     }
   });
+
+  function tooltipPositionFix(){
+    $('.tooltip-popup').each(function(key,item){
+      var X = $(item).offset().left;
+      if (X + 260 > document.documentElement.clientWidth) {
+        $(item).css('marginLeft',-(X - 15)+'px');
+      } else {
+        $(item).removeAttr('style');
+      }
+    });
+  }
+
+  $(window).on('load resize',tooltipPositionFix);
+  
+
 
 });
 
@@ -932,3 +956,57 @@ function filesStorePreview (e,input,files,id,previews) {
   }//for
 }
 
+function jQueryValidatorDefaults() {
+  jQuery.validator.setDefaults({
+    debug: true,
+    errorClass: 'invalid',
+    successClass: 'valid',
+    focusInvalid: false,
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      if ( element.parent().hasClass('jq-checkbox') ||  element.parent().hasClass('jq-radio')) {
+        element.closest('label').after(error);
+        
+      } else if (element.parent().hasClass('jq-selectbox')) {
+        element.closest('.jq-selectbox').after(error);
+      } else {
+        error.insertAfter(element);
+      }
+    },
+    highlight: function(element, errorClass, validClass) {
+      if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
+        $(element).parent().addClass(errorClass).removeClass(validClass);
+      } else {
+        $(element).addClass(errorClass).removeClass(validClass);
+      }
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
+        $(element).parent().removeClass(errorClass).addClass(validClass);
+      } else {
+        $(element).removeClass(errorClass).addClass(validClass);
+      }
+    }
+  });
+  
+  //дефолтные сообщения, предупреждения
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Обязательное поле",
+    email: "Некорректный email адрес",
+    url: "Некорректный URL",
+    number: "Некорректный номер",
+    digits: "Это поле поддерживает только числа",
+    equalTo: "Поля не совпадают",
+    maxlength: jQuery.validator.format('Максимальная длина поля {0} символа(ов)'),
+    minlength: jQuery.validator.format('Минимальная длина поля {0} символа(ов)'),
+  });
+  
+  //кастомные методы валидатора
+  jQuery.validator.addMethod("lettersonly", function(value, element) {
+    return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
+  }, "Только буквы");
+  
+  jQuery.validator.addMethod("telephone", function(value, element) {
+    return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/i.test(value);
+  }, "Некорректный формат");
+}

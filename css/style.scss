@@ -16088,23 +16088,6 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
     margin-bottom: -6px;
   }
 
-  .consumables__item{
-   .btn__custom {
-    padding-right: 15px;
-    padding-left: 15px;
-     background-image: none;
-     &:before{
-       display: inline-block;
-       vertical-align: middle;
-       content: '';
-       width: 18px;
-       height: 13px;
-       margin-right: 7px;
-       background: url("../images/icart.png") no-repeat 0 -223px;
-     }
-   }
-  }
-
   .consumables__col {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;

@@ -1204,6 +1204,16 @@ MOBILE HEADER
     height: 100%;
   }
 }
+.mobile__menu-catalog-level-2 {
+
+  li.to-main-category a {
+    color: #666;
+  }
+}
+li.to-main-category a {
+  color: #666;
+  background: #f4f4f4;
+}
 
 
 
@@ -1795,10 +1805,6 @@ VIDEO PAGE
 
       &:last-child {
         margin-right: 0;
-        padding: 13px;
-      }
-      &:nth-child(3) {
-        padding: 12px;
       }
 
       svg {
@@ -2998,6 +3004,7 @@ CARDS
     line-height: 1.1;
     margin-top: 12px;
     margin-bottom: 18px;
+    min-height: 24px;
     font-weight: 700;
     color: #252525;
     white-space: nowrap;
@@ -3011,7 +3018,7 @@ CARDS
       font-size: 22px;
     }
     &-notprice {
-      font-size: 22px;
+      font-size: 18px;
     }
     &-info {
       display: inline-block;

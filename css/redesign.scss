@@ -2748,9 +2748,22 @@ textarea.ui-input {
   background: #262626;
   opacity: 0.98;
   z-index: 10242;
+  position: fixed !important;
+  height: 100% !important;
 }
 .mfp-wrap {
   z-index: 10243;
+  position: fixed !important;
+  height: 100% !important;
+  top: 0 !important;
+  overflow: hidden !important;
+}
+.mfp-container {
+  overflow-y: auto;
+}
+html.mfp-open {
+  overflow: hidden;
+  margin: 0 !important;
 }
 .white-popup {
   max-width: 580px;
@@ -2857,6 +2870,21 @@ textarea.ui-input {
       margin-bottom: 3px;
     }
   }
+  &-req {
+    color: orange;
+  }
+  &-btns {
+    padding-top: 10px;
+
+    button {
+      margin-right: 15px;
+    }
+  }
+  &-hint {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+  }
   input#{&}-input,
   textarea#{&}-input,
   select#{&}-input {
@@ -2874,15 +2902,57 @@ textarea.ui-input {
       border-color: $c_primary;
     }
   }
+}
+.white-popup {
+  font-size: 14px;
+
+  input#{&}-input,
+  textarea#{&}-input,
+  select#{&}-input {
+    height: 40px;
+    width: 100%;
+    border-radius: 0;
+    padding: 0px 20px;
+    border: 1px solid $c_border;
+    transition: border .4s;
+
+    &:hover {
+      border-color: darken($c_border,10%);
+    }
+    &:focus {
+      border-color: $c_primary;
+    }
+  }
+  &-field {
+    margin-bottom: 15px;
+    position: relative;
+
+    &-label {
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+  }
   &-req {
     color: orange;
   }
   &-btns {
     padding-top: 10px;
+  }
+}
+.popup-analogs {
+  max-width: 1200px;
+  padding: 20px;
 
-    button {
-      margin-right: 15px;
-    }
+  &-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+.slick-analogs {
+  .slick-arrow {
+    top: 65px;
+    bottom: auto;
+    margin: 0;
   }
 }
 .spy-new {
@@ -2898,13 +2968,6 @@ textarea.ui-input {
     text-align: left;
   }
 }
-// .card__complect-slide {
-//   opacity: 0;
-
-//   &.slick-active {
-//     opacity: 1;
-//   }
-// }
 .card__complect-block {
   min-height: 287px;
 
@@ -2918,6 +2981,35 @@ textarea.ui-input {
   .card__item-price {
     min-height: 21px;
   }
+}
+.cards__fr-item {
+  .price__info {
+    padding-left: 5px;
+  }
+}
+.pr__card-action.ui-nowrap {
+  white-space: nowrap;
+
+  @media (max-width: 1200px) and (min-width: 768px) {
+    white-space: normal;
+  }
+}
+input,
+select,
+textarea,
+.jq-selectbox__select {
+  &.invalid {
+    border-color: #f76262 !important;
+  }
+  &.valid {
+    border-color: #1b5ca6;
+  }
+}
+span.invalid {
+  display: inline-block;
+  padding-top: 3px;
+  color: #f76262 !important;
+  font-size: 12px;
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
@@ -2974,6 +3066,25 @@ textarea.ui-input {
 }//1200px
 
 @media (max-width: 992px) {
+  .slick-analogs {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .consumables__item {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 1px;
+    }
+    .slick-prev {
+      left: 10px;
+    }
+    .slick-next {
+      right: 10px;
+    }
+  }
+  .consumables__item {
+    margin-bottom: 1px;
+  }
   .card__imgs {
     margin-bottom: 20px;
   }
@@ -3301,9 +3412,26 @@ textarea.ui-input {
     margin-left: -15px;
     margin-right: -15px;
   }
-  .tooltip-circle {
-    display: block;
-    margin: 7px 7px 7px 0;
+  .one-click-btns {
+    display: flex;
+    align-items: center;
+  }
+  .tooltip-popup {
+    &:before {
+      content: none;
+    }
+  }
+  .card__produce {
+    & > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &-header {
+      margin-right: 15px;
+    }
+    &-info {
+      margin-bottom: 14px;
+    }
   }
 }//480px end
 
@@ -3318,7 +3446,6 @@ textarea.ui-input {
     }
   }
   .card__sale {
-    padding: 15px 35px 15px 70px;
 
     &-icon {
       left: 15px;
