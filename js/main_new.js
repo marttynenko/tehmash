@@ -78,6 +78,13 @@ jQuery(document).ready(function(){
     var $this = $(this);
     var $target = $(this).data('target');
     if ($target != undefined && $target != '') {
+      if ($target === 'header__mobile-phones') {
+        var $targetObj = $('.'+$target).find('.header__contacts-drop');
+        var $targetEls = $targetObj.find('*');
+        if (!$targetEls.length) {
+          ajaxBlockLoader($targetObj);
+        }
+      }
       $('.header__mobile-action').not($this).removeClass('active');
       $(this).toggleClass('active');
       $('.header__mobile-drop').not('.'+$target).removeClass('opened');
@@ -866,9 +873,48 @@ jQuery(document).ready(function(){
   }
 
   $(window).on('load resize',tooltipPositionFix);
+
+  $(document).on('click','.header__contacts-wrap',function(e){
+    e.preventDefault();
+    const drop = $(this).closest('.header__contacts').find('.header__contacts-drop');
+    const dropEls = drop.find('*').length;
+
+    if (dropEls > 0) {
+      drop.toggleClass('opened');
+    } else {
+      var url = drop.attr('data-href');
+      $.ajax({
+        url: url,
+        type: 'GET',
+        success: function(data) {
+          drop.prepend(data);
+          drop.addClass('opened');
+        }
+      });
+    }
+  });
   
+});
 
+//подтягивание блоков аяксом
+function ajaxBlockLoader(source) {
+  $(source).each(function(key,item){
+    var url = $(item).attr('data-href');
+    $.ajax({
+      url: url,
+      type: 'GET',
+      success: function(data) {
+        $(item).prepend(data);
+      }
+    });
+  });
+}
 
+jQuery(window).on('load',function(){
+  /* setTimeout(()=>{
+    ajaxBlockLoader('.ajax-block-loading');
+  },150); */
+  
 });
 
 

@@ -3473,10 +3473,14 @@ span.invalid {
 }//380px end
 
 @media (max-height: 500px) {
-  .header__fixed.active {
-    opacity: 0;
-    visibility: hidden;
-  }
+  // header.header.fixed .header__top {
+  //   position: static;
+  //   z-index: 1;
+  // }
+  // .header__contacts {
+  //   position: static;
+  //   z-index: 1;
+  // }
   .spy-new {
     padding: 0;
   }
