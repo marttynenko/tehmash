@@ -1040,7 +1040,7 @@ $(window).on('load',function(){
 function lazyLibraryLoad(scriptSrc,linkHref,callback) {
     let script = document.createElement('script');
     script.src = scriptSrc;
-    document.querySelector('script[src*="main_new.js"]').before(script);
+    document.querySelector('script[src*="main.js"]').before(script);
   
     if (linkHref !== '') {
       let style = document.createElement('link');
