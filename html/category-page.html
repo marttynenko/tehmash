@@ -1,1346 +1,1125 @@
 <!--#include file="inc-header.html"-->
 <div class="content">
-  <div class="sides__section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-12 col__custom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-12 col__custom">
 
-          <div class="side__box side__box-filters hidden-xs">
-            <div class="cards__filter">
-              <div class="cards__filter-header">
-                Параметры выбора
+        <div class="side__box side__box-filters hidden-xs">
+          <div class="cards__filter">
+            <div class="cards__filter-header">
+              Параметры выбора
+            </div>
+            <div class="cards__filter-block">
+              <div class="cards__filter-section">
+                <div class="cards__filter-toggle">
+                  <a href="javascript:void(0)">
+                    <div class="cards__filter-label">
+                      Цена, руб.
+                    </div>
+                    <span class="tooltip tooltip-circle">?<div class="tooltip-popup">Какая-то подсказка</div></span>
+                  </a>
+                </div>
+                <div class="cards__filter-content">
+                  <div class="cards__filter-inputs">
+                    <div class="slide__filter">
+                      <div class="slide__filter-header clearfix">
+                        <div class="filter__from float-left">
+                          <input type="text">
+                        </div>
+                        <div class="filter__end float-right">
+                          <input type="text">
+                        </div>
+                      </div>
+                      <div class="filter__sl filter__sl-price" data-step="500" data-max="95000" data-min="1200"></div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div class="cards__filter-block">
-                <div class="cards__filter-section">
-                  <div class="cards__filter-toggle">
-                    <a href="javascript:void(0)">
-                      <div class="cards__filter-label">
-                        Цена, руб.
-                      </div>
-                      <span class="tooltip tooltip-circle">?<div class="tooltip-popup">Какая-то подсказка</div></span>
-                    </a>
-                  </div>
-                  <div class="cards__filter-content">
-                    <div class="cards__filter-inputs">
-                      <div class="slide__filter">
-                        <div class="slide__filter-header clearfix">
-                          <div class="filter__from float-left">
-                            <input type="text">
-                          </div>
-                          <div class="filter__end float-right">
-                            <input type="text">
-                          </div>
-                        </div>
-                        <div class="filter__sl filter__sl-price" data-step="500" data-max="95000" data-min="1200"></div>
-                      </div>
+              <div class="cards__filter-section">
+                <div class="cards__filter-toggle">
+                  <a href="javascript:void(0)">
+                    <div class="cards__filter-label">
+                      Тип компрессора
                     </div>
-                  </div>
-
+                  </a>
                 </div>
-                <div class="cards__filter-section">
-                  <div class="cards__filter-toggle">
-                    <a href="javascript:void(0)">
-                      <div class="cards__filter-label">
-                        Тип компрессора
-                      </div>
-                    </a>
-                  </div>
-                  <div class="cards__filter-content">
-                    <div class="cards__filter-inputs">
-                      <div class="row">
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">Безмасляный</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">Передвижной с бензоприводом</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">Передвижной с электроприводом</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">Повышенного давления</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">С вертикальным ресивером</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">С осушителем воздуха</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">С прямым приводом</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">С ременным приводом</span>
-                            </label>
-                          </div>
+                <div class="cards__filter-content">
+                  <div class="cards__filter-inputs">
+                    <div class="row">
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">Безмасляный</span>
+                          </label>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards__filter-section">
-                  <div class="cards__filter-toggle">
-                    <a href="javascript:void(0)">
-                      <div class="cards__filter-label">
-                        Ресивер, л
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">Передвижной с бензоприводом</span>
+                          </label>
+                        </div>
                       </div>
-                      <span class="tooltip tooltip-circle">?<div class="tooltip-popup"><b>Ресивер</b> представляет собой емкость для хранения избытков сжатого воздуха, выработанного компрессором. Он позволяет сглаживать колебания давления в системе, снижая пиковые нагрузки, охлаждая воздух и отделяя конденсат. Объем ресивера измеряется в литрах и влияет на режим работы компрессора. С большим ресивером он будет включаться реже. Но при этом ему потребуется больше времени работать без перерыва, чтоб его наполнить. При выборе объема ресивера так же учитывайте, чтобы компрессор запускался не чаще 10 раз в час, для накачивания ресивера сжатым воздухом.</div></span>
-                    </a>
-                  </div>
-                  <div class="cards__filter-content">
-                    <div class="cards__filter-inputs">
-                      <div class="row">
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">-</span>
-                            </label>
-                          </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">Передвижной с электроприводом</span>
+                          </label>
                         </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">20</span>
-                            </label>
-                          </div>
+                      </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">Повышенного давления</span>
+                          </label>
                         </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">24</span>
-                            </label>
-                          </div>
+                      </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">С вертикальным ресивером</span>
+                          </label>
                         </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">50</span>
-                            </label>
-                          </div>
+                      </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">С осушителем воздуха</span>
+                          </label>
                         </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">90</span>
-                            </label>
-                          </div>
+                      </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">С прямым приводом</span>
+                          </label>
                         </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">100</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">150</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">200</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">270</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-6 col__custom">
-                          <div class="checkbox__wrap">
-                            <label>
-                              <input type="checkbox">
-                              <span class="checkbox__decor"></span>
-                              <span class="checkbox__span">500</span>
-                            </label>
-                          </div>
+                      </div>
+                      <div class="col-12 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">С ременным приводом</span>
+                          </label>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="cards__filter-sticky">
-                  <div class="cards__filter-informer-wrap flex">
-                    <div class="cards__filter-informer flex">
-                      <div class="cards__filter-informer-txt">Найдено 295 товаров</div>
-                      <div class="cards__filter-informer-icon">
-                        <svg class="sprite svg-filter-icon">
-                          <use xlink:href="../svg/svg/symbols.svg#14_refresh_filter">
-                        </svg>
+              </div>
+              <div class="cards__filter-section">
+                <div class="cards__filter-toggle">
+                  <a href="javascript:void(0)">
+                    <div class="cards__filter-label">
+                      Ресивер, л
+                    </div>
+                    <span class="tooltip tooltip-circle">?<div class="tooltip-popup"><b>Ресивер</b> представляет собой емкость для хранения избытков сжатого воздуха, выработанного компрессором. Он позволяет сглаживать колебания давления в системе, снижая пиковые нагрузки, охлаждая воздух и отделяя конденсат. Объем ресивера измеряется в литрах и влияет на режим работы компрессора. С большим ресивером он будет включаться реже. Но при этом ему потребуется больше времени работать без перерыва, чтоб его наполнить. При выборе объема ресивера так же учитывайте, чтобы компрессор запускался не чаще 10 раз в час, для накачивания ресивера сжатым воздухом.</div></span>
+                  </a>
+                </div>
+                <div class="cards__filter-content">
+                  <div class="cards__filter-inputs">
+                    <div class="row">
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">-</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">20</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">24</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">50</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">90</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">100</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">150</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">200</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">270</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 col__custom">
+                        <div class="checkbox__wrap">
+                          <label>
+                            <input type="checkbox">
+                            <span class="checkbox__decor"></span>
+                            <span class="checkbox__span">500</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="cards__filter-informer inverted flex">
-                      <div class="cards__filter-informer-txt">Сбросить фильтр</div>
-                      <div class="cards__filter-informer-icon">
-                        <svg class="sprite svg-filter-icon">
-                          <use xlink:href="../svg/svg/symbols.svg#13_reset_filter">
-                        </svg>
-                      </div>
-                    </div>
-                  </div><!--.informer-wrap-->
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-lg-9 col-md-8 col__custom  col__catalog-list-body">
-
-          <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                <span itemprop="name"><a href="../">Главная</a></span>
-                <meta itemprop="position" content="1">
-            </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                <span itemprop="name"><a href="../">Каталог</a></span>
-                <meta itemprop="position" content="2">
-            </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-                <span itemprop="name">Воздушные компрессоры</span>
-                <meta itemprop="position" content="3">
-            </li>
-          </ol>
-
-          <div class="page__title">
-            <h1>
-              Компрессоры воздушные
-            </h1>
-          </div>
-
-          <div class="sub__categories">
-            <div class="sub__categories-mtoggler" onclick=""></div>
-            <div class="row">
-              <div class="col-xl-3 col-lg-4 col-md-6">
-                <a href="#" class="sub__category-item">
-                  <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-1.jpg" alt="alt"></div>
-                  <div class="sub__category-item-txt">Поршневые</div>
-                </a>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-md-6">
-                <a href="#" class="sub__category-item">
-                  <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-2.jpg" alt="alt"></div>
-                  <div class="sub__category-item-txt">Винтовые</div>
-                </a>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-md-6">
-                <a href="#" class="sub__category-item">
-                  <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-3.jpg" alt="alt"></div>
-                  <div class="sub__category-item-txt">Дизельные</div>
-                </a>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-md-6">
-                <a href="#" class="sub__category-item">
-                  <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-4.jpg" alt="alt"></div>
-                  <div class="sub__category-item-txt">Для буровых установок</div>
-                </a>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-md-6">
-                <a href="#" class="sub__category-item">
-                  <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-2.jpg" alt="alt"></div>
-                  <div class="sub__category-item-txt">Поршневые</div>
-                </a>
-              </div>
-            </div>
-          </div><!--.sub__categories-->
-
-          <div class="quick__params">
-            <div class="quick__params-mtoggler" onclick=""></div>
-            <div class="quick__params-line flex">
-              <div class="quick__params-line-title">По применению:</div>
-              <div class="quick__params-line-links">
-                <a href="#">Ссылка 1</a>
-                <a href="#">Ссылка 2</a>
-                <a href="#">Ссылка 3</a>
-                <a href="#">Ссылка 4</a>
-                <a href="#">Ссылка 5</a>
-              </div>
-            </div>
-            <div class="quick__params-line flex">
-              <div class="quick__params-line-title">Популярное:</div>
-              <div class="quick__params-line-links">
-                <a href="#">Ссылка 1</a>
-                <a href="#">Ссылка 2</a>
-                <a href="#">Ссылка 3</a>
-              </div>
-            </div>
-            <div class="quick__params-line flex">
-              <div class="quick__params-line-title">Мощность:</div>
-              <div class="quick__params-line-links">
-                <a href="#">Ссылка 1</a>
-                <a href="#">Ссылка 2</a>
-                <a href="#">Ссылка 3</a>
-                <a href="#">Ссылка 4</a>
-                <a href="#">Ссылка 5</a>
-                <a href="#">Ссылка 1</a>
-                <a href="#">Ссылка 2</a>
-                <a href="#">Ссылка 3</a>
-                <a href="#">Ссылка 4</a>
-                <a href="#">Ссылка 5</a>
-              </div>
-            </div>
-          </div><!--.quick-params-->
-          
-          <div class="active__filters-wrap">
-            <div class="active__filters">
-              <a href="#" class="active__filters-reset-all mobile">
-                <svg class="sprite svg-mobile-refresh">
-                  <use xlink:href="../svg/svg/symbols.svg#refresh">
-                </svg>
-              </a>
-              <a href="#" class="active__filters-link">Поршневые</a>
-              <a href="#" class="active__filters-link">Для буровых установок</a>
-              <a href="#" class="active__filters-link">1000 Вт</a>
-              <a href="#" class="active__filters-link">Ниже 70 Дб</a>
-              <a href="#" class="active__filters-reset-all">Сбросить фильтры</a>
-            </div>
-          </div>
-
-
-          <div class="sorting__box filters-sorting__mobile clearfix">
-            <div class="filters-sorting__mobile-togglers flex justify-content-between">
-              <div class="sorting__mobile-toggler">
-                <svg class="sprite i-svg svg-mm-filters">
-                  <use xlink:href="../svg/svg/symbols.svg#23_sort">
-                </svg>
-                Сортировка
-              </div>
-              <div class="filters__mobile-toggler">
-                <svg class="sprite i-svg svg-mm-filters">
-                  <use xlink:href="../svg/svg/symbols.svg#22_filter">
-                </svg>
-                Фильтр
-              </div>
-            </div>
-            <form method="post" action="">
-              <div class="sorting__box-left">
-                <div class="sorting__box-col">
-                  <div class="sorting__box-label">
-                    Выводить по:
-                  </div>
-                  <div class="select__wrap select__count">
-                    <select>
-                      <option>15</option>
-                      <option>30</option>
-                      <option>60</option>
-                      <option>120</option>
-                      <option>300</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="sorting__box-col">
-                  <div class="sorting__box-label">
-                    Сортировать:
-                  </div>
-                  <div class="select__wrap select__type">
-                    <select>
-                      <option>Самые популярные</option>
-                      <option>Менее популярные</option>
-                      <option>По возрастанию цены</option>
-                      <option>По убыванию цены</option>
-                      <option>А -&gt; Я</option>
-                      <option>Я -&gt; А</option>
-                    </select>
                   </div>
                 </div>
               </div>
-              <div class="sorting__box-right">
-                <div class="sorting__box-col">
-                  <div class="sorting__box-label">
-                    Вид списка:
-                  </div>
-                  <div class="view__links view__links-svg">
-                    <a href="javascript:void(0)" data-view="net" class="cards__view cards__view-net active">
-                      <svg class="sprite svg-catalog-view">
-                        <use xlink:href="../svg/svg/symbols.svg#15_list_tile">
+              <div class="cards__filter-sticky">
+                <div class="cards__filter-informer-wrap flex">
+                  <div class="cards__filter-informer flex">
+                    <div class="cards__filter-informer-txt">Найдено 295 товаров</div>
+                    <div class="cards__filter-informer-icon">
+                      <svg class="sprite svg-filter-icon">
+                        <use xlink:href="../svg/svg/symbols.svg#14_refresh_filter">
                       </svg>
-                    </a>
-                    <a href="javascript:void(0)" data-view="list" class="cards__view cards__view-list">
-                      <svg class="sprite svg-catalog-view">
-                        <use xlink:href="../svg/svg/symbols.svg#15_list_table">
+                    </div>
+                  </div>
+
+                  <div class="cards__filter-informer inverted flex">
+                    <div class="cards__filter-informer-txt">Сбросить фильтр</div>
+                    <div class="cards__filter-informer-icon">
+                      <svg class="sprite svg-filter-icon">
+                        <use xlink:href="../svg/svg/symbols.svg#13_reset_filter">
                       </svg>
-                    </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </form>
-          </div><!--.sorting__box-->
-
-          <div class="products__list" itemscope itemtype="https://schema.org/ItemList">
-            <link itemprop="url" href="url">
-            <div class="row m-0">
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-stickers">
-                      <div class="sticker sticker-yellow"><svg class="sprite i-svg svg-sticker-gift"><use xlink:href="../svg/svg/symbols.svg#02_gift_nofill"></use></svg>Акция</div>
-                      <div class="sticker sticker-gray">Очень легкий</div>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Поршневой компрессор ECO Matrix AE-251-1</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__empty"></span>
-                          <span class="star__empty"></span>
-                          <meta itemprop="ratingValue" content="3"/>
-                          <meta itemprop="reviewCount" content="2"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">2 отзыва</a>
-                      </div>
-                      <div class="pr__card-only-table" itemprop="description">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Над путь имени безорфографичный последний, на берегу ему, инициал подзаголовок коварный несколько, проектах строчка необходимыми повстречался рыбными что языкового гор скатился напоивший за то текстов буквоград? Первую, ведущими родного его моей буквоград собрал домах выйти грамматики?</div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-price" itemprop="price">5 620</span>
-                        <span class="pr__card-price-info">
-                          <div class="pr__card-price-currency"><span>RUR</span>/шт.</div>
-                          <div class="pr__card-price-nds">с НДС</div>
-                        </span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/InStock" />
-                      </div>
-
-                      <div class="pr__card-btns">
-                        <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#07_cart"></use></svg>В корзину</a>
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action">Купить в 1 клик</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover">
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Сечение штифта, мм:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина скобы, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Ширина спинки скобы, мм:</dt>
-                        <dd>11.4</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-stickers">
-                      <div class="sticker sticker-orange">Очень легкий</div>
-                      <div class="sticker sticker-red">Акция!</div>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <meta itemprop="ratingValue" content="5"/>
-                          <meta itemprop="reviewCount" content="17"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">17 отзыва</a>
-                      </div>
-                      <div class="pr__card-only-table" itemprop="description">
-                        <div class="pr__card-params" itemprop="description">
-                          <dl>
-                            <dt>Потребляемая мощность, кВт</dt>
-                            <dd>7</dd>
-                          </dl>
-                          <dl>
-                            <dt>Давление конечное, бар</dt>
-                            <dd>50</dd>
-                          </dl>
-                          <dl>
-                            <dt>Масса, кг</dt>
-                            <dd>350</dd>
-                          </dl>
-                          <dl>
-                            <dt>Потребляемая мощность, кВт</dt>
-                            <dd>7</dd>
-                          </dl>
-                          <dl>
-                            <dt>Давление конечное, бар</dt>
-                            <dd>50</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                      </div>
-
-                      <div class="pr__card-btns">
-                        <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action pr__card-action-alert">
-                          <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover">
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Сечение штифта, мм:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина скобы, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Ширина спинки скобы, мм:</dt>
-                        <dd>11.4</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img  itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-stickers">
-                      <div class="sticker sticker-gray">Очень легкий</div>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <meta itemprop="ratingValue" content="5"/>
-                          <meta itemprop="reviewCount" content="38"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">38 отзыва</a>
-                      </div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/PreOrder" />
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action pr__card-action-alert">
-                          <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover" itemprop="description">
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Сечение штифта, мм:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина скобы, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Ширина спинки скобы, мм:</dt>
-                        <dd>11.4</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28 и еще какой-то текст в названии товара</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">18291283123</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <meta itemprop="ratingValue" content="5"/>
-                          <meta itemprop="reviewCount" content="17"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">17 отзыва</a>
-                      </div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                      </div>
-
-                      <div class="pr__card-btns flex align-items-center">
-                        <a href="javascript:void(0)" class="btn__custom btn__flex btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action pr__card-action-alert">
-                          <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
-                      </div>
-
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover" itemprop="description">
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-stickers">
-                      <div class="sticker sticker-blue">Акция</div>
-                      <div class="sticker sticker-gray">Очень легкий</div>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Поршневой компрессор ECO Matrix AE-251-1</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__empty"></span>
-                          <span class="star__empty"></span>
-                          <meta itemprop="ratingValue" content="3"/>
-                          <meta itemprop="reviewCount" content="2"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">2 отзыва</a>
-                      </div>
-                      <div class="pr__card-only-table" itemprop="description">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Над путь имени безорфографичный последний, на берегу ему, инициал подзаголовок коварный несколько, проектах строчка необходимыми повстречался рыбными что языкового гор скатился напоивший за то текстов буквоград? Первую, ведущими родного его моей буквоград собрал домах выйти грамматики?</div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-price" itemprop="price">5 620</span>
-                        <span class="pr__card-price-info">
-                          <div class="pr__card-price-currency"><span>RUR</span>/шт.</div>
-                          <div class="pr__card-price-nds">с НДС</div>
-                        </span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/InStock" />
-                      </div>
-
-                      <div class="pr__card-btns">
-                        <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#07_cart"></use></svg>В корзину</a>
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action">Купить в 1 клик</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover">
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Сечение штифта, мм:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина скобы, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Ширина спинки скобы, мм:</dt>
-                        <dd>11.4</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-              <div class="col-xl-4 col-md-6 p-0">
-                <div class="pr__card" 
-                itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
-                  <div class="pr__card-inner">
-                    <div class="pr__card-img">
-                      <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
-                    </div>
-
-                    <div class="pr__card-stickers">
-                      <div class="sticker sticker-purple">С регулировкой давления</div>
-                      <div class="sticker sticker-yellow-dark">Для пейнтбола</div>
-                    </div>
-
-                    <div class="pr__card-middle">
-                      <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
-                      <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
-                      <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <div class="card__stars">
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <span class="star__full"></span>
-                          <meta itemprop="ratingValue" content="5"/>
-                          <meta itemprop="reviewCount" content="17"/>
-                        </div>
-                        <a href="#" class="pr__card-to-reviews">17 отзыва</a>
-                      </div>
-                      <div class="pr__card-only-table" itemprop="description">
-                        <div class="pr__card-params" itemprop="description">
-                          <dl>
-                            <dt>Потребляемая мощность, кВт</dt>
-                            <dd>7</dd>
-                          </dl>
-                          <dl>
-                            <dt>Давление конечное, бар</dt>
-                            <dd>50</dd>
-                          </dl>
-                          <dl>
-                            <dt>Масса, кг</dt>
-                            <dd>350</dd>
-                          </dl>
-                          <dl>
-                            <dt>Потребляемая мощность, кВт</dt>
-                            <dd>7</dd>
-                          </dl>
-                          <dl>
-                            <dt>Давление конечное, бар</dt>
-                            <dd>50</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div><!--.pr__card-middle-->
-
-                    <div class="pr__card-store">
-                      <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
-                        <meta itemprop="priceCurrency" content="RUB"/>
-                        <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                      </div>
-
-                      <div class="pr__card-btns">
-                        <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
-                      </div>
-
-                      <div class="pr__card-actions flex align-items-center">
-                        <a href="#" class="pr__card-action pr__card-action-alert">
-                          <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
-                        <a href="#" class="pr__card-action ui-nowrap">
-                          <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
-                        </a>
-                      </div>
-
-                      <div class="pr__card-term">
-                        <svg class="sprite i-svg svg-card-car">
-                          <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
-                        </svg>Срок поставки: <span>8 дней</span>
-                      </div>
-                    </div><!--.pr__card-store-->
-
-                    <div class="pr__card-hover">
-                      <dl>
-                        <dt>Тип крепежа:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина штифта, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Сечение штифта, мм:</dt>
-                        <dd>штифт тип J, скоба тип 53</dd>
-                      </dl>
-                      <dl>
-                        <dt>Длина скобы, мм:</dt>
-                        <dd>4-16</dd>
-                      </dl>
-                      <dl>
-                        <dt>Ширина спинки скобы, мм:</dt>
-                        <dd>11.4</dd>
-                      </dl>
-                    </div>
-                  </div><!--.pr__card-inner-->
-                </div><!--.pr__card-->
-              </div>
-
-            </div><!--.row-->
-          </div><!--.products__list-->
-
-          <ul class="pager paginator products__pgn"><li class="pager-current"><span>1</span></li>
-            <li class="pager-item"><a title="На страницу номер 2" href="/pnevmoshlifmashinki?page=1">2</a></li>
-            <li class="pager-item"><a title="На страницу номер 3" href="/pnevmoshlifmashinki?page=2">3</a></li>
-            <li class="pager-item"><a title="На страницу номер 4" href="/pnevmoshlifmashinki?page=3">4</a></li>
-            <li class="pager-item"><a title="На страницу номер 5" href="/pnevmoshlifmashinki?page=4">5</a></li>
-            <li class="pager-next"><a href="/pnevmoshlifmashinki?page=1"></a></li>
-          </ul>
-
-          <div class="products__consumables">
-            <div class="h2">Расходные материалы</div>
-
-            <div class="slick-consumables">
-              <div class="slick-consumables-item">
-                <div class="consumables-item">
-                  <div class="consumables-item-img"><a href="#"><img loading="lazy" src="../images/redesign/cons-1.jpg" alt="alt"></a></div>
-                  <div class="consumables-item-title"><a href="#">Аккумуляторы</a></div>
-                  <div class="consumables-item-amount">229 товаров</div>
-                </div>
-              </div>
-
-              <div class="slick-consumables-item">
-                <div class="consumables-item">
-                  <div class="consumables-item-img"><a href="#"><img loading="lazy" src="../images/redesign/cons-2.jpg" alt="alt"></a></div>
-                  <div class="consumables-item-title"><a href="#">Биты и сверла</a></div>
-                  <div class="consumables-item-amount">239 товаров</div>
-                </div>
-              </div>
-
-              <div class="slick-consumables-item">
-                <div class="consumables-item">
-                  <div class="consumables-item-img"><a href="#"><img loading="lazy" src="../images/redesign/cons-3.jpg" alt="alt"></a></div>
-                  <div class="consumables-item-title"><a href="#">Головки</a></div>
-                  <div class="consumables-item-amount">581 товаров</div>
-                </div>
-              </div>
-
-              <div class="slick-consumables-item">
-                <div class="consumables-item">
-                  <div class="consumables-item-img"><a href="#"><img loading="lazy" src="../images/redesign/cons-4.jpg" alt="alt"></a></div>
-                  <div class="consumables-item-title"><a href="#">Переходники</a></div>
-                  <div class="consumables-item-amount">35 товаров</div>
-                </div>
-              </div>
-            </div><!--.slick-consumables-->
-          </div><!--.products-consumables-->
-
-
-          <div class="products-usefull">
-            <div class="products-usefull-menu scroll-by-anchors">
-              <a href="#usefull_1"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-attention"/></svg></i><span>Полезная информация</span></a>
-
-              <a href="#usefull_2" class="mobile-only"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-video"/></svg></i><span>Видео</span></a>
-
-              <a href="#usefull_3"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-articles"/></svg></i><span>Статьи</span></a>
-
-              <a href="#usefull_4"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-questions"/></svg></i><span>Ответы на вопросы</span></a>
-
-              <a href="#usefull_5"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-review"/></svg></i><span>Отзывы</span></a>
-
-              <a href="#usefull_6"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-comment"/></svg></i><span>Форум</span></a>
-
-              <a href="#usefull_7"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-manufacters"/></svg></i><span>Производители</span></a>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="usefull-block usefull-padding" id="useful_1">
-                  <div class="usefull-block-title">
-                    Полезная информация
-                    <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-attention"/></svg></i>
-                  </div>
-                  <p><strong>Виды воздушных компрессоров</strong></p>
-                  <p>Производители предлагают огромный выбор воздушных компрессоров, которые классифицируются:</p>
-
-                  <p>
-                    <strong>1.</strong> По назначению (бытовые и промышленные). Бытовые компрессоры отличаются малыми габаритами и мощностью. Промышленные модели отличаются повышенной производительностью и рассчитаны на многочасовую эксплуатацию.
-                  </p>
-                  <p>
-                    <strong>2.</strong> По способу размещения (передвижные и стационарные). Передвижные устройства оборудованы прочными колесиками для транспортировки к месту работы. Стационарные установки размещаются на специально оборудованном массивном фундаменте.
-                  </p>
-                  <p>
-                    <strong>3.</strong> По уровню давления (высокого, среднего и низкого давления).
-                  </p>
-                  <p>
-                    <strong>4.</strong> По типу привода (дизельные и электрические). Дизельные агрегаты нередко функционируют автономно, вдали от промышленных предприятий и источников электроэнергии. Электрический воздушный компрессор 220 В работает от стандартной силовой сети.
-                  </p>
-                  <p>
-                    <strong>5.</strong> По использованию масла (масляные и безмасляные). Безмасляные модели используются в медицине, фармацевтической, пищевой промышленности и в высокоточном производстве
-                  </p>
-                </div>
-              </div><!--.col-->
-              <div class="col-lg-4">
-                <div class="usefull-block" id="usefull_2">
-                  <div class="usefull-block-title">
-                    Видео
-                    <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-video"/></svg></i>
-                  </div>
-
-                  <div class="slick-usefulvideo">
-                    <div class="slick-usefullvideo-slide">
-                      <div class="usefull-video">
-                        <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
-                        <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
-                      </div>
-                    </div>
-
-                    <div class="slick-usefullvideo-slide">
-                      <div class="usefull-video">
-                        <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=1IrVzAPANJM" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-2.jpg" alt="alt"></a></div>
-                        <div class="usefull-video-title"><a href="#">Сравнение шуруповертов Bosch и Metabo</a></div>
-                      </div>
-                    </div>
-
-                    <div class="slick-usefullvideo-slide">
-                      <div class="usefull-video">
-                        <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
-                        <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
-                      </div>
-                    </div>
-                  </div><!--.slick-->
-                </div>
-              </div><!--.col-->
-            </div><!--.row-->
-
-            <div class="usefull-block usefull-padding" id="usefull_4">
-              <div class="usefull-block-title">
-                Ответы на вопросы
-                <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-questions"/></svg></i>
-              </div>
-              <div class="question-item">
-                <div class="question-item-title">Кто производитель?</div>
-                <div class="question-item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi omnis reiciendis harum eum. Accusamus, consequuntur beatae quod eveniet blanditiis repudiandae voluptatem sunt distinctio animi ipsam molestiae voluptatibus saepe pariatur.</div>
-              </div><!--.question-item-->
-              <div class="question-item">
-                <div class="question-item-title">Будет ли доставка?</div>
-                <div class="question-item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi omnis reiciendis harum eum. Accusamus, consequuntur beatae quod eveniet blanditiis repudiandae voluptatem sunt distinctio animi ipsam molestiae voluptatibus saepe pariatur.</div>
-              </div><!--.question-item-->
-              <div class="question-item">
-                <div class="question-item-title">Безопасен ли такой компрессор?</div>
-                <div class="question-item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi omnis reiciendis harum eum. Accusamus, consequuntur beatae quod eveniet blanditiis repudiandae voluptatem sunt distinctio animi ipsam molestiae voluptatibus saepe pariatur.</div>
-              </div><!--.question-item-->
-
-              <div class="question-item">
-                <div class="question-item-title">Насколько часто нужно менять масло в компрессоре?</div>
-                <div class="question-item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi omnis reiciendis harum eum. Accusamus, consequuntur beatae quod eveniet blanditiis repudiandae voluptatem sunt distinctio animi ipsam molestiae voluptatibus saepe pariatur.</div>
-              </div><!--.question-item-->
-            </div><!--.usefull-block-->
-
-            <div class="usefull-block usefull-padding" id="usefull_3">
-              <div class="usefull-block-head flex justify-content-between align-items-baseline">
-                <div class="usefull-block-title">
-                  Полезные статьи
-                  <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-articles"/></svg></i>
-                </div>
-                <a href="#" class="usefull-block-headlink">Смотреть все статьи →</a>
-              </div><!--head-->
-
-              <div class="slick-usefullarticles">
-                <div class="slick-usefullarticles-slide">
-                  <div class="usefull-article">
-                    <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-1.jpg" alt="alt"></a></div>
-                    <div class="usefull-article-title"><a href="#">Какой отбойный молоток выбрать: пневматический, бензиновый или...</a></div>
-                    <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
-                    <div class="usefull-article-date">30 декабря 2019</div>
-                  </div>
-                </div>
-
-                <div class="slick-usefullarticles-slide">
-                  <div class="usefull-article">
-                    <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-2.jpg" alt="alt"></a></div>
-                    <div class="usefull-article-title"><a href="#">Особенности выбора сварочного аппарата</a></div>
-                    <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
-                    <div class="usefull-article-date">30 декабря 2019</div>
-                  </div>
-                </div>
-
-                <div class="slick-usefullarticles-slide">
-                  <div class="usefull-article">
-                    <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-3.jpg" alt="alt"></a></div>
-                    <div class="usefull-article-title"><a href="#">Как выбрать шуруповерт</a></div>
-                    <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
-                    <div class="usefull-article-date">9 января 2020</div>
-                  </div>
-                </div>
-
-                <div class="slick-usefullarticles-slide">
-                  <div class="usefull-article">
-                    <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-1.jpg" alt="alt"></a></div>
-                    <div class="usefull-article-title"><a href="#">Какой отбойный молоток выбрать: пневматический, бензиновый или...</a></div>
-                    <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
-                    <div class="usefull-article-date">30 декабря 2019</div>
-                  </div>
-                </div>
-              </div><!--.slick-usefullarticles-->
-
-              <div class="ui-centered usefull-block-mobile-link"><a href="#">Смотреть все статьи →</a></div>
-              
-            </div><!--.usefull-block-->
-          </div><!--.products-usefull-->
-
-
-          <div class="usefull-block usefull-block-out" id="usefull_5">
-            <div class="h2">Отзывы</div>
-
-            <div class="slick-usefullreviews">
-              <div class="slick-usefullreviews-slide">
-                <div class="usefull-review">
-                  <div class="usefull-review-img">
-                    <a href="#"><img loading="lazy" src="../images/redesign/useful-review-1.jpg" alt="alt"></a>
-                  </div>
-                  <div class="usefull-review-title"><a href="#">Компрессор FUBAG PAINT MASTER KIT</a></div>
-                  <div class="usefull-review-author">Степан</div>
-                  <div class="usefull-review-date">Сегодня</div>
-                  <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
-                </div>
-              </div>
-
-              <div class="slick-usefullreviews-slide">
-                <div class="usefull-review">
-                  <div class="usefull-review-img">
-                    <a href="#"><img loading="lazy" src="../images/redesign/useful-review-2.jpg" alt="alt"></a>
-                  </div>
-                  <div class="usefull-review-title"><a href="#">Компрессор Forsage F29x78</a></div>
-                  <div class="usefull-review-author">Игорь</div>
-                  <div class="usefull-review-date">Вчера</div>
-                  <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
-                </div>
-              </div>
-
-              <div class="slick-usefullreviews-slide">
-                <div class="usefull-review">
-                  <div class="usefull-review-img">
-                    <a href="#"><img loading="lazy" src="../images/redesign/useful-review-1.jpg" alt="alt"></a>
-                  </div>
-                  <div class="usefull-review-title"><a href="#">Компрессор FUBAG PAINT MASTER KIT</a></div>
-                  <div class="usefull-review-author">Степан</div>
-                  <div class="usefull-review-date">Сегодня</div>
-                  <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
-                </div>
-              </div>
-
-              <div class="slick-usefullreviews-slide">
-                <div class="usefull-review">
-                  <div class="usefull-review-img">
-                    <a href="#"><img loading="lazy" src="../images/redesign/useful-review-2.jpg" alt="alt"></a>
-                  </div>
-                  <div class="usefull-review-title"><a href="#">Компрессор Forsage F29x78</a></div>
-                  <div class="usefull-review-author">Игорь</div>
-                  <div class="usefull-review-date">Вчера</div>
-                  <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
-                </div>
-              </div>
-            </div><!--slick-->
-            <div class="ui-centered">
-              <a href="#" class="ui-btn ui-btn-bordered-blue">Показать все</a>
-            </div>
-          </div><!--.usefull-block-out-->
-
-
-          <div class="usefull-block usefull-block-out" id="usefull_6">
-            <div class="usefull-block-head flex align-items-baseline justify-content-between">
-              <div class="h2">Форум</div>
-              <a href="#" class="usefull-block-headlink">Смотреть все темы →</a>
-            </div>
-
-            <div class="forum-mini">
-              <div class="forum-mini-row head">
-                <div class="forum-mini-col theme">Последние темы</div>
-                <div class="forum-mini-col msgs">Обсуждения</div>
-              </div>
-              <div class="forum-mini-row">
-                <div class="forum-mini-col theme"><a href="#">Чем отличается сварочный аппрата от инвертора?</a></div>
-                <div class="forum-mini-col msgs">
-                  <div class="forum-mini-counter">5 комментариев</div>
-                </div>
-              </div>
-              <div class="forum-mini-row">
-                <div class="forum-mini-col theme"><a href="#">Какой отбойный молоток выбрать: пневматический, бензиновый или электрический.</a></div>
-                <div class="forum-mini-col msgs">
-                  <div class="forum-mini-counter">205 комментариев</div>
-                </div>
-              </div>
-              <div class="forum-mini-row">
-                <div class="forum-mini-col theme"><a href="#">Совместимость пистолетов Hilti, Fixpistols, Toua, WALTE с дюбелями и патронами российского производства. Стоит ли переплачивать?</a></div>
-                <div class="forum-mini-col msgs">
-                  <div class="forum-mini-counter">11 комментариев</div>
-                </div>
-              </div>
-            </div><!--.forum-mini-->
-            <div class="ui-centered usefull-block-mobile-link"><a href="#">Смотреть все темы →</a></div>
-          </div><!--.usefull-block-out-->
-
-          <div class="usefull-block usefull-block-out" id="usefull_7">
-            <div class="h2">Производители</div>
-            <div class="manufacters-list">
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-2.png" alt="alt"></div>
-                  <div class="manufacter-item-title">DeWalt</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-1.png" alt="alt"></div>
-                  <div class="manufacter-item-title">Bort</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-2.png" alt="alt"></div>
-                  <div class="manufacter-item-title">DeWalt</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-1.png" alt="alt"></div>
-                  <div class="manufacter-item-title">Bort</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-2.png" alt="alt"></div>
-                  <div class="manufacter-item-title">DeWalt</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-1.png" alt="alt"></div>
-                  <div class="manufacter-item-title">Bort</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-2.png" alt="alt"></div>
-                  <div class="manufacter-item-title">DeWalt</div>
-                </a>
-              </div>
-
-              <div class="manufacter-item">
-                <a href="#" class="manufacter-item-link">
-                  <div class="manufacter-item-img"><img loading="lazy" src="../images/redesign/manufacter-1.png" alt="alt"></div>
-                  <div class="manufacter-item-title">Bort</div>
-                </a>
-              </div>
-            </div><!--.manufacters-list-->
-            <div class="manufacers-list-toggler ui-centered"><a href="javascript:void(0)" class="ui-btn ui-btn-bordered-blue">Показать еще</a></div>
-          </div><!--.usefull-block-out-->
-
+                </div><!--.informer-wrap-->
                 
-       
-
+              </div>
+            </div>
+          </div>
         </div>
+
+      </div>
+      <div class="col-lg-9 col-md-8 col__custom  col__catalog-list-body">
+
+        <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span itemprop="name"><a href="../">Главная</a></span>
+              <meta itemprop="position" content="1">
+          </li>
+          <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span itemprop="name"><a href="../">Каталог</a></span>
+              <meta itemprop="position" content="2">
+          </li>
+          <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span itemprop="name">Воздушные компрессоры</span>
+              <meta itemprop="position" content="3">
+          </li>
+        </ol>
+
+        <div class="page__title">
+          <h1>
+            Компрессоры воздушные
+          </h1>
+        </div>
+
+        <div class="sub__categories">
+          <div class="sub__categories-mtoggler" onclick=""></div>
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <a href="#" class="sub__category-item">
+                <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-1.jpg" alt="alt"></div>
+                <div class="sub__category-item-txt">Поршневые</div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <a href="#" class="sub__category-item">
+                <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-2.jpg" alt="alt"></div>
+                <div class="sub__category-item-txt">Винтовые</div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <a href="#" class="sub__category-item">
+                <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-3.jpg" alt="alt"></div>
+                <div class="sub__category-item-txt">Дизельные</div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <a href="#" class="sub__category-item">
+                <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-4.jpg" alt="alt"></div>
+                <div class="sub__category-item-txt">Для буровых установок</div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <a href="#" class="sub__category-item">
+                <div class="sub__category-item-img"><img loading="lazy" src="../images/video/sub-cat-2.jpg" alt="alt"></div>
+                <div class="sub__category-item-txt">Поршневые</div>
+              </a>
+            </div>
+          </div>
+        </div><!--.sub__categories-->
+
+        <div class="quick__params">
+          <div class="quick__params-mtoggler" onclick=""></div>
+          <div class="quick__params-line flex">
+            <div class="quick__params-line-title">По применению:</div>
+            <div class="quick__params-line-links">
+              <a href="#">Ссылка 1</a>
+              <a href="#">Ссылка 2</a>
+              <a href="#">Ссылка 3</a>
+              <a href="#">Ссылка 4</a>
+              <a href="#">Ссылка 5</a>
+            </div>
+          </div>
+          <div class="quick__params-line flex">
+            <div class="quick__params-line-title">Популярное:</div>
+            <div class="quick__params-line-links">
+              <a href="#">Ссылка 1</a>
+              <a href="#">Ссылка 2</a>
+              <a href="#">Ссылка 3</a>
+            </div>
+          </div>
+          <div class="quick__params-line flex">
+            <div class="quick__params-line-title">Мощность:</div>
+            <div class="quick__params-line-links">
+              <a href="#">Ссылка 1</a>
+              <a href="#">Ссылка 2</a>
+              <a href="#">Ссылка 3</a>
+              <a href="#">Ссылка 4</a>
+              <a href="#">Ссылка 5</a>
+              <a href="#">Ссылка 1</a>
+              <a href="#">Ссылка 2</a>
+              <a href="#">Ссылка 3</a>
+              <a href="#">Ссылка 4</a>
+              <a href="#">Ссылка 5</a>
+            </div>
+          </div>
+        </div><!--.quick-params-->
+        
+        <div class="active__filters-wrap">
+          <div class="active__filters">
+            <a href="#" class="active__filters-reset-all mobile">
+              <svg class="sprite svg-mobile-refresh">
+                <use xlink:href="../svg/svg/symbols.svg#refresh">
+              </svg>
+            </a>
+            <a href="#" class="active__filters-link">Поршневые</a>
+            <a href="#" class="active__filters-link">Для буровых установок</a>
+            <a href="#" class="active__filters-link">1000 Вт</a>
+            <a href="#" class="active__filters-link">Ниже 70 Дб</a>
+            <a href="#" class="active__filters-reset-all">Сбросить фильтры</a>
+          </div>
+        </div>
+
+
+        <div class="sorting__box filters-sorting__mobile clearfix">
+          <div class="filters-sorting__mobile-togglers flex justify-content-between">
+            <div class="sorting__mobile-toggler">
+              <svg class="sprite i-svg svg-mm-filters">
+                <use xlink:href="../svg/svg/symbols.svg#23_sort">
+              </svg>
+              Сортировка
+            </div>
+            <div class="filters__mobile-toggler">
+              <svg class="sprite i-svg svg-mm-filters">
+                <use xlink:href="../svg/svg/symbols.svg#22_filter">
+              </svg>
+              Фильтр
+            </div>
+          </div>
+          <form method="post" action="">
+            <div class="sorting__box-left">
+              <div class="sorting__box-col">
+                <div class="sorting__box-label">
+                  Выводить по:
+                </div>
+                <div class="select__wrap select__count">
+                  <select>
+                    <option>15</option>
+                    <option>30</option>
+                    <option>60</option>
+                    <option>120</option>
+                    <option>300</option>
+                  </select>
+                </div>
+              </div>
+              <div class="sorting__box-col">
+                <div class="sorting__box-label">
+                  Сортировать:
+                </div>
+                <div class="select__wrap select__type">
+                  <select>
+                    <option>Самые популярные</option>
+                    <option>Менее популярные</option>
+                    <option>По возрастанию цены</option>
+                    <option>По убыванию цены</option>
+                    <option>А -&gt; Я</option>
+                    <option>Я -&gt; А</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="sorting__box-right">
+              <div class="sorting__box-col">
+                <div class="sorting__box-label">
+                  Вид списка:
+                </div>
+                <div class="view__links view__links-svg">
+                  <a href="javascript:void(0)" data-view="net" class="cards__view cards__view-net active">
+                    <svg class="sprite svg-catalog-view">
+                      <use xlink:href="../svg/svg/symbols.svg#15_list_tile">
+                    </svg>
+                  </a>
+                  <a href="javascript:void(0)" data-view="list" class="cards__view cards__view-list">
+                    <svg class="sprite svg-catalog-view">
+                      <use xlink:href="../svg/svg/symbols.svg#15_list_table">
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div><!--.sorting__box-->
+
+        <div class="products__list" itemscope itemtype="https://schema.org/ItemList">
+          <link itemprop="url" href="url">
+          <div class="row m-0">
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-stickers">
+                    <div class="sticker sticker-yellow"><svg class="sprite i-svg svg-sticker-gift"><use xlink:href="../svg/svg/symbols.svg#02_gift_nofill"></use></svg>Акция</div>
+                    <div class="sticker sticker-gray">Очень легкий</div>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Поршневой компрессор ECO Matrix AE-251-1</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__empty"></span>
+                        <span class="star__empty"></span>
+                        <meta itemprop="ratingValue" content="3"/>
+                        <meta itemprop="reviewCount" content="2"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">2 отзыва</a>
+                    </div>
+                    <div class="pr__card-only-table" itemprop="description">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Над путь имени безорфографичный последний, на берегу ему, инициал подзаголовок коварный несколько, проектах строчка необходимыми повстречался рыбными что языкового гор скатился напоивший за то текстов буквоград? Первую, ведущими родного его моей буквоград собрал домах выйти грамматики?</div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-price" itemprop="price">5 620</span>
+                      <span class="pr__card-price-info">
+                        <div class="pr__card-price-currency"><span>RUR</span>/шт.</div>
+                        <div class="pr__card-price-nds">с НДС</div>
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/InStock" />
+                    </div>
+
+                    <div class="pr__card-btns">
+                      <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#07_cart"></use></svg>В корзину</a>
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action">Купить в 1 клик</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover">
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Сечение штифта, мм:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина скобы, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Ширина спинки скобы, мм:</dt>
+                      <dd>11.4</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-stickers">
+                    <div class="sticker sticker-orange">Очень легкий</div>
+                    <div class="sticker sticker-red">Акция!</div>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <meta itemprop="ratingValue" content="5"/>
+                        <meta itemprop="reviewCount" content="17"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">17 отзыва</a>
+                    </div>
+                    <div class="pr__card-only-table" itemprop="description">
+                      <div class="pr__card-params" itemprop="description">
+                        <dl>
+                          <dt>Потребляемая мощность, кВт</dt>
+                          <dd>7</dd>
+                        </dl>
+                        <dl>
+                          <dt>Давление конечное, бар</dt>
+                          <dd>50</dd>
+                        </dl>
+                        <dl>
+                          <dt>Масса, кг</dt>
+                          <dd>350</dd>
+                        </dl>
+                        <dl>
+                          <dt>Потребляемая мощность, кВт</dt>
+                          <dd>7</dd>
+                        </dl>
+                        <dl>
+                          <dt>Давление конечное, бар</dt>
+                          <dd>50</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                    </div>
+
+                    <div class="pr__card-btns">
+                      <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action pr__card-action-alert">
+                        <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover">
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Сечение штифта, мм:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина скобы, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Ширина спинки скобы, мм:</dt>
+                      <dd>11.4</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img  itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-stickers">
+                    <div class="sticker sticker-gray">Очень легкий</div>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <meta itemprop="ratingValue" content="5"/>
+                        <meta itemprop="reviewCount" content="38"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">38 отзыва</a>
+                    </div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/PreOrder" />
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action pr__card-action-alert">
+                        <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover" itemprop="description">
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Сечение штифта, мм:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина скобы, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Ширина спинки скобы, мм:</dt>
+                      <dd>11.4</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28 и еще какой-то текст в названии товара</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">18291283123</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <meta itemprop="ratingValue" content="5"/>
+                        <meta itemprop="reviewCount" content="17"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">17 отзыва</a>
+                    </div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                    </div>
+
+                    <div class="pr__card-btns flex align-items-center">
+                      <a href="javascript:void(0)" class="btn__custom btn__flex btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action pr__card-action-alert">
+                        <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
+                    </div>
+
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover" itemprop="description">
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img itemprop="image" src="../images/pr-1.jpg" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-stickers">
+                    <div class="sticker sticker-blue">Акция</div>
+                    <div class="sticker sticker-gray">Очень легкий</div>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Поршневой компрессор ECO Matrix AE-251-1</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__empty"></span>
+                        <span class="star__empty"></span>
+                        <meta itemprop="ratingValue" content="3"/>
+                        <meta itemprop="reviewCount" content="2"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">2 отзыва</a>
+                    </div>
+                    <div class="pr__card-only-table" itemprop="description">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Над путь имени безорфографичный последний, на берегу ему, инициал подзаголовок коварный несколько, проектах строчка необходимыми повстречался рыбными что языкового гор скатился напоивший за то текстов буквоград? Первую, ведущими родного его моей буквоград собрал домах выйти грамматики?</div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-price" itemprop="price">5 620</span>
+                      <span class="pr__card-price-info">
+                        <div class="pr__card-price-currency"><span>RUR</span>/шт.</div>
+                        <div class="pr__card-price-nds">с НДС</div>
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/InStock" />
+                    </div>
+
+                    <div class="pr__card-btns">
+                      <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#07_cart"></use></svg>В корзину</a>
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action">Купить в 1 клик</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover">
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Сечение штифта, мм:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина скобы, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Ширина спинки скобы, мм:</dt>
+                      <dd>11.4</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+            <div class="col-xl-4 col-md-6 p-0">
+              <div class="pr__card" 
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+                <div class="pr__card-inner">
+                  <div class="pr__card-img">
+                    <a href="#"><img itemprop="image" src="../images/pr-1.png" alt="alt"></a>
+                  </div>
+
+                  <div class="pr__card-stickers">
+                    <div class="sticker sticker-purple">С регулировкой давления</div>
+                    <div class="sticker sticker-yellow-dark">Для пейнтбола</div>
+                  </div>
+
+                  <div class="pr__card-middle">
+                    <div class="pr__card-title"><a href="#" itemprop="name">Компрессор дизельный Metabo M30-BL28</a></div>
+                    <div class="pr__card-code">Код товара: <span itemprop="sku">3493243241</span></div>
+                    <div class="pr__card-rate" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                      <div class="card__stars">
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <span class="star__full"></span>
+                        <meta itemprop="ratingValue" content="5"/>
+                        <meta itemprop="reviewCount" content="17"/>
+                      </div>
+                      <a href="#" class="pr__card-to-reviews">17 отзыва</a>
+                    </div>
+                    <div class="pr__card-only-table" itemprop="description">
+                      <div class="pr__card-params" itemprop="description">
+                        <dl>
+                          <dt>Потребляемая мощность, кВт</dt>
+                          <dd>7</dd>
+                        </dl>
+                        <dl>
+                          <dt>Давление конечное, бар</dt>
+                          <dd>50</dd>
+                        </dl>
+                        <dl>
+                          <dt>Масса, кг</dt>
+                          <dd>350</dd>
+                        </dl>
+                        <dl>
+                          <dt>Потребляемая мощность, кВт</dt>
+                          <dd>7</dd>
+                        </dl>
+                        <dl>
+                          <dt>Давление конечное, бар</dt>
+                          <dd>50</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div><!--.pr__card-middle-->
+
+                  <div class="pr__card-store">
+                    <div class="pr__card-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                      <span class="pr__card-price-notprice" itemprop="price">Цена по запросу</span>
+                      <meta itemprop="priceCurrency" content="RUB"/>
+                      <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                    </div>
+
+                    <div class="pr__card-btns">
+                      <a href="javascript:void(0)" class="btn__custom btn__block btn__custom-blue "><svg class="sprite i-svg svg-cart-miniicon"><use xlink:href="../svg/svg/symbols.svg#11_analog"></use></svg>Подобрать аналог</a>
+                    </div>
+
+                    <div class="pr__card-actions flex align-items-center">
+                      <a href="#" class="pr__card-action pr__card-action-alert">
+                        <svg class="sprite svg-pr-icon svg-pr-bell"><use xlink:href="../svg/svg/symbols.svg#12_bell"></use></svg>Сообщить о поступлении</a>
+                      <a href="#" class="pr__card-action ui-nowrap">
+                        <svg class="sprite svg-pr-icon"><use xlink:href="../svg/svg/symbols.svg#04_compare"></use></svg>В сравнение
+                      </a>
+                    </div>
+
+                    <div class="pr__card-term">
+                      <svg class="sprite i-svg svg-card-car">
+                        <use xlink:href="../svg/svg/symbols.svg#30_car"></use>
+                      </svg>Срок поставки: <span>8 дней</span>
+                    </div>
+                  </div><!--.pr__card-store-->
+
+                  <div class="pr__card-hover">
+                    <dl>
+                      <dt>Тип крепежа:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина штифта, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Сечение штифта, мм:</dt>
+                      <dd>штифт тип J, скоба тип 53</dd>
+                    </dl>
+                    <dl>
+                      <dt>Длина скобы, мм:</dt>
+                      <dd>4-16</dd>
+                    </dl>
+                    <dl>
+                      <dt>Ширина спинки скобы, мм:</dt>
+                      <dd>11.4</dd>
+                    </dl>
+                  </div>
+                </div><!--.pr__card-inner-->
+              </div><!--.pr__card-->
+            </div>
+
+          </div><!--.row-->
+        </div><!--.products__list-->
+
+        <ul class="pager paginator products__pgn"><li class="pager-current"><span>1</span></li>
+          <li class="pager-item"><a title="На страницу номер 2" href="/pnevmoshlifmashinki?page=1">2</a></li>
+          <li class="pager-item"><a title="На страницу номер 3" href="/pnevmoshlifmashinki?page=2">3</a></li>
+          <li class="pager-item"><a title="На страницу номер 4" href="/pnevmoshlifmashinki?page=3">4</a></li>
+          <li class="pager-item"><a title="На страницу номер 5" href="/pnevmoshlifmashinki?page=4">5</a></li>
+          <li class="pager-next"><a href="/pnevmoshlifmashinki?page=1"></a></li>
+        </ul>
+
+        <div class="products__consumables">
+          <div class="h2">Расходные материалы</div>
+
+          <div class="ajx-scroll-load" data-loaded="false" data-href="../ajax/ajx-products-consumables.html"></div>
+        </div><!--.products-consumables-->
+
+
+        <div class="products-usefull">
+          <div class="products-usefull-menu scroll-by-anchors">
+            <a href="#usefull_1"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-attention"/></svg></i><span>Полезная информация</span></a>
+
+            <a href="#usefull_2" class="mobile-only"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-video"/></svg></i><span>Видео</span></a>
+
+            <a href="#usefull_3"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-articles"/></svg></i><span>Статьи</span></a>
+
+            <a href="#usefull_4"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-questions"/></svg></i><span>Ответы на вопросы</span></a>
+
+            <a href="#usefull_5"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-review"/></svg></i><span>Отзывы</span></a>
+
+            <a href="#usefull_6"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-comment"/></svg></i><span>Форум</span></a>
+
+            <a href="#usefull_7"><i><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-manufacters"/></svg></i><span>Производители</span></a>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="usefull-block usefull-padding" id="usefull_1">
+                <div class="usefull-block-title">
+                  Полезная информация
+                  <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-attention"/></svg></i>
+                </div>
+                <p><strong>Виды воздушных компрессоров</strong></p>
+                <p>Производители предлагают огромный выбор воздушных компрессоров, которые классифицируются:</p>
+
+                <p>
+                  <strong>1.</strong> По назначению (бытовые и промышленные). Бытовые компрессоры отличаются малыми габаритами и мощностью. Промышленные модели отличаются повышенной производительностью и рассчитаны на многочасовую эксплуатацию.
+                </p>
+                <p>
+                  <strong>2.</strong> По способу размещения (передвижные и стационарные). Передвижные устройства оборудованы прочными колесиками для транспортировки к месту работы. Стационарные установки размещаются на специально оборудованном массивном фундаменте.
+                </p>
+                <p>
+                  <strong>3.</strong> По уровню давления (высокого, среднего и низкого давления).
+                </p>
+                <p>
+                  <strong>4.</strong> По типу привода (дизельные и электрические). Дизельные агрегаты нередко функционируют автономно, вдали от промышленных предприятий и источников электроэнергии. Электрический воздушный компрессор 220 В работает от стандартной силовой сети.
+                </p>
+                <p>
+                  <strong>5.</strong> По использованию масла (масляные и безмасляные). Безмасляные модели используются в медицине, фармацевтической, пищевой промышленности и в высокоточном производстве
+                </p>
+              </div>
+            </div><!--.col-->
+            <div class="col-lg-4">
+              <div class="usefull-block" id="usefull_2">
+                <div class="usefull-block-title">
+                  Видео
+                  <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-video"/></svg></i>
+                </div>
+
+                <div class="ajx-scroll-load" data-href="../ajax/ajx-products-video.html"></div>
+                <div class="slick-usefulvideo">
+                  <div class="slick-usefullvideo-slide">
+                    <div class="usefull-video">
+                      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
+                      <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
+                    </div>
+                  </div>
+
+                  <div class="slick-usefullvideo-slide">
+                    <div class="usefull-video">
+                      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=1IrVzAPANJM" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-2.jpg" alt="alt"></a></div>
+                      <div class="usefull-video-title"><a href="#">Сравнение шуруповертов Bosch и Metabo</a></div>
+                    </div>
+                  </div>
+
+                  <div class="slick-usefullvideo-slide">
+                    <div class="usefull-video">
+                      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
+                      <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
+                    </div>
+                  </div>
+                </div><!--.slick-->
+              </div>
+            </div><!--.col-->
+          </div><!--.row-->
+
+          <div class="usefull-block usefull-padding" id="usefull_4">
+            <div class="usefull-block-title">
+              Ответы на вопросы
+              <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-questions"/></svg></i>
+            </div>
+            <div class="ajx-scroll-load" data-href="../ajax/ajx-products-questions.html" data-loaded="false"></div>
+          </div><!--.usefull-block-->
+
+          <div class="usefull-block usefull-padding" id="usefull_3">
+            <div class="usefull-block-head flex justify-content-between align-items-baseline">
+              <div class="usefull-block-title">
+                Полезные статьи
+                <i class="usefull-block-icon"><svg class="sprite svg-products-usefull-icon"><use xlink:href="../svg/svg/symbols.svg#useful-articles"/></svg></i>
+              </div>
+              <a href="#" class="usefull-block-headlink">Смотреть все статьи →</a>
+            </div><!--head-->
+
+            <div class="ajx-scroll-load" data-href="../ajax/ajx-products-articles.html" data-loaded="false"></div>
+          </div><!--.usefull-block-->
+        </div><!--.products-usefull-->
+
+
+        <div class="usefull-block usefull-block-out" id="usefull_5">
+          <div class="h2">Отзывы</div>
+
+          <div class="ajx-scroll-load" data-href="../ajax/ajx-products-reviews.html" data-loaded="false"></div>
+        </div><!--.usefull-block-out-->
+
+
+        <div class="usefull-block usefull-block-out" id="usefull_6">
+          <div class="usefull-block-head flex align-items-baseline justify-content-between">
+            <div class="h2">Форум</div>
+            <a href="#" class="usefull-block-headlink">Смотреть все темы →</a>
+          </div>
+
+          <div class="ajx-scroll-load" data-href="../ajax/ajx-products-forum.html" data-loaded="false"></div>
+        </div><!--.usefull-block-out-->
+
+        <div class="usefull-block usefull-block-out" id="usefull_7">
+          <div class="h2">Производители</div>
+          <div class="ajx-scroll-load" data-href="../ajax/ajx-products-manufacters.html" data-loaded="false"></div>
+        </div><!--.usefull-block-out-->
+
+              
+      
+
       </div>
     </div>
   </div>
-</div>
-<!--.content-->
+</div><!--.content-->
 <!--#include file="inc-footer-dark.html"-->

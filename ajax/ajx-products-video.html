@@ -1,0 +1,46 @@
+<div class="slick-usefulvideo">
+  <div class="slick-usefullvideo-slide">
+    <div class="usefull-video">
+      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
+      <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
+    </div>
+  </div>
+
+  <div class="slick-usefullvideo-slide">
+    <div class="usefull-video">
+      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=1IrVzAPANJM" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-2.jpg" alt="alt"></a></div>
+      <div class="usefull-video-title"><a href="#">Сравнение шуруповертов Bosch и Metabo</a></div>
+    </div>
+  </div>
+
+  <div class="slick-usefullvideo-slide">
+    <div class="usefull-video">
+      <div class="usefull-video-img"><a href="https://www.youtube.com/watch?v=8X8rntrl4sk" class="mfp-video"><img loading="lazy" src="../images/redesign/useful-video-1.jpg" alt="alt"></a></div>
+      <div class="usefull-video-title"><a href="#">Обзор аккумуляторного шуруповерта Bosch GSR 120-LI</a></div>
+    </div>
+  </div>
+</div><!--.slick-->
+
+
+
+<script>
+  jQuery(document).ready(function(){
+    $('.slick-usefulvideo').slick({
+      vertical: true,
+      infinite: false,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            vertical: false,
+            variableWidth: true,
+            slidesToScroll: 1,
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>

@@ -1,0 +1,87 @@
+<div class="slick-usefullreviews">
+  <div class="slick-usefullreviews-slide">
+    <div class="usefull-review">
+      <div class="usefull-review-img">
+        <a href="#"><img loading="lazy" src="../images/redesign/useful-review-1.jpg" alt="alt"></a>
+      </div>
+      <div class="usefull-review-title"><a href="#">Компрессор FUBAG PAINT MASTER KIT</a></div>
+      <div class="usefull-review-author">Степан</div>
+      <div class="usefull-review-date">Сегодня</div>
+      <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
+    </div>
+  </div>
+
+  <div class="slick-usefullreviews-slide">
+    <div class="usefull-review">
+      <div class="usefull-review-img">
+        <a href="#"><img loading="lazy" src="../images/redesign/useful-review-2.jpg" alt="alt"></a>
+      </div>
+      <div class="usefull-review-title"><a href="#">Компрессор Forsage F29x78</a></div>
+      <div class="usefull-review-author">Игорь</div>
+      <div class="usefull-review-date">Вчера</div>
+      <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
+    </div>
+  </div>
+
+  <div class="slick-usefullreviews-slide">
+    <div class="usefull-review">
+      <div class="usefull-review-img">
+        <a href="#"><img loading="lazy" src="../images/redesign/useful-review-1.jpg" alt="alt"></a>
+      </div>
+      <div class="usefull-review-title"><a href="#">Компрессор FUBAG PAINT MASTER KIT</a></div>
+      <div class="usefull-review-author">Степан</div>
+      <div class="usefull-review-date">Сегодня</div>
+      <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
+    </div>
+  </div>
+
+  <div class="slick-usefullreviews-slide">
+    <div class="usefull-review">
+      <div class="usefull-review-img">
+        <a href="#"><img loading="lazy" src="../images/redesign/useful-review-2.jpg" alt="alt"></a>
+      </div>
+      <div class="usefull-review-title"><a href="#">Компрессор Forsage F29x78</a></div>
+      <div class="usefull-review-author">Игорь</div>
+      <div class="usefull-review-date">Вчера</div>
+      <div class="usefull-review-body">Большое спасибо за скидку в магазине, также спасибо за видео обзор на этот шурик,он помог мне решиться на покупку. шурик увесистый.подсветка яркая... <a href="#">Читать далее</a></div>
+    </div>
+  </div>
+</div><!--slick-->
+<div class="ui-centered">
+  <a href="#" class="ui-btn ui-btn-bordered-blue">Показать все</a>
+</div>
+
+
+<script>
+  jQuery(document).ready(function(){
+    $('.slick-usefullreviews').slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            variableWidth: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
+          }
+        }
+      ]
+    });
+  });
+</script>

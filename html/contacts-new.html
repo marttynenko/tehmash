@@ -78,8 +78,17 @@
 
         <div class="contacts__block" id="contacts__map">
           <div class="contacts__block-map" id="scheme_map">
-            <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A265d48c50627f3fe363ff62968259e0136ce83aeca7a51fdfbcfb3ff27d8633c&amp;width=100%25&amp;height=499&amp;lang=ru_UA&amp;scroll=true"></script>
+            <!-- <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A265d48c50627f3fe363ff62968259e0136ce83aeca7a51fdfbcfb3ff27d8633c&amp;width=100%25&amp;height=499&amp;lang=ru_UA&amp;scroll=true"></script> -->
           </div>
+          <script>
+            window.addEventListener("load", function(event){
+              var scr = document.createElement('script');
+              scr.async = true;
+              scr.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A265d48c50627f3fe363ff62968259e0136ce83aeca7a51fdfbcfb3ff27d8633c&amp;width=100%25&amp;height=499&amp;lang=ru_UA&amp;scroll=true';
+
+              document.getElementById('scheme_map').appendChild(scr);
+            });
+          </script>
           <div class="contacts__media">
             <div class="row">
               <div class="col-6">

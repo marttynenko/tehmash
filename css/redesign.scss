@@ -3011,6 +3011,90 @@ span.invalid {
   color: #f76262 !important;
   font-size: 12px;
 }
+.ui-preloader {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  background: #f2f2f2;
+  padding: 20px 15px 30px;
+  text-align: center;
+
+  &-hint {
+    font-weight: 600;
+    font-size: 18px;
+    color: #252525;
+    margin-top: -20px;
+  }
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: $c_primary;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.ui-error {
+  background: #f2f2f2;
+  padding: 30px 20px;
+  font-size: 18px;
+  color: #f76262;
+  text-align: center;
+  font-weight: 600;
+}
+
 
 @media (max-width: 1200px) and (min-width: 992px) {
   .card__video-item + .card__video-item {
@@ -3473,14 +3557,6 @@ span.invalid {
 }//380px end
 
 @media (max-height: 500px) {
-  // header.header.fixed .header__top {
-  //   position: static;
-  //   z-index: 1;
-  // }
-  // .header__contacts {
-  //   position: static;
-  //   z-index: 1;
-  // }
   .spy-new {
     padding: 0;
   }

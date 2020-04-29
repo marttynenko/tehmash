@@ -1,0 +1,22 @@
+<div class="video-item">
+  <div class="video-item-img">
+    <a href="https://www.youtube.com/watch?v=Ox8D-KREzvk" class="ui-video mfp-video" tabindex="0">
+      <img loading="lazy" src="../images/redesign/card-video-big.jpg" alt="alt">
+      <div class="ui-video-play"></div>
+    </a>
+  </div>
+  <div class="video-item-title"><a href="https://www.youtube.com/watch?v=Ox8D-KREzvk" class="mfp-video" tabindex="0">Реле давления (прессостат, моностат) CONDOR MDR 2, устройство и регулировка.</a></div>
+</div>
+
+<script>
+  jQuery(document).ready(function () {
+  //лениво "тянем" и инициализируем магнифик
+  if ($('.ajax-mfp').length || $('.mfp-video').length) {
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css',
+        magnificPopupInit
+      );
+    }
+  });
+</script>

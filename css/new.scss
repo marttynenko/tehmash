@@ -296,13 +296,16 @@ LAYOUT
 	overflow: hidden;
 	min-height: 100%;
 }
-.flex-wrapper .content {
+.flex-wrapper .middle {
 	-webkit-flex: 1 0 auto;
 	-moz-flex: 1 0 auto;
 	-o-flex: 1 0 auto;
 	-ms-flex: 1 0 auto;
   flex: 1 0 auto;
   padding-bottom: 40px;
+}
+.flex-wrapper .content {
+  padding-bottom: 20px;
 }
 .flex-wrapper .footer {
 	-webkit-flex: 0 0 auto;
@@ -390,7 +393,7 @@ HEADER
   .header.fixed {
     .header__top {
       position: fixed;
-      z-index: 99;
+      z-index: 199;
 
       .container {
         padding-top: 3px;
@@ -475,6 +478,7 @@ svg[class*="svg-h"] {
 
     &-link, a {
       color: $c_dark;
+      transition: color .4s;
     }
 
     &-toggler {

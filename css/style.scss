@@ -12040,22 +12040,7 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
     line-height: 28px;
   }
 
-  .footer__pay{
-    margin-top: 20px;
-  }
 
-  .content{
-    padding-bottom: 330px;
-  }
-
-  .footer{
-    height: 330px;
-    margin-top: -330px;
-  }
-
-  .phone__fixed{
-    display: none;
-  }
 
   .filter__from:after{
     opacity: 0;
@@ -13001,16 +12986,6 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
 
   .hidden-md{
     display: none !important;
-  }
-
-  .footer{
-    background-size: cover;
-    height: auto;
-    margin-top: 0;
-    background-repeat: repeat;
-    .col-xl-5{
-      margin-bottom: 15px;
-    }
   }
 
   .content{
@@ -14581,57 +14556,9 @@ a, button, .cards__fr-item-bl, .card__item-box, .popover__custom-toggle:after, .
     position: relative;
   }
 
-  .footer{
-    .col-xl-3.col-md-3{
-      max-width: 246px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
 
-  .footer__nav{
-    text-align: left;
-  }
+  
 
-  .footer__pay {
-    margin-top: 30px;
-  }
-
-  .header__fixed{
-    .logo{
-      margin-right: 0;
-    }
-
-    .nav-bars{
-      float: right;
-      margin-left: 0 !important;
-      margin-top: 5px;
-    }
-  }
-
-  .header__main{
-    .header__cart {
-      width: 75px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-
-  .footer__market{
-    margin-bottom: 30px;
-  }
-
-  .footer__pay{
-    img{
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  .footer{
-    text-align: center;
-  }
 
   .card__item:nth-child(3n) {
     display: block;

@@ -37,39 +37,7 @@ RESPONSIVE STYLES
   padding-bottom: 0;
   margin-bottom: 30px;
 }
-.col-footer__top-media {
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-top: 25px;
-  position: relative;
-  font-size: 0;
 
-  &:before {
-    content: "";
-    position: absolute;
-    left: -400px;
-    right: -400px;
-    top: 0;
-    height: 1px;
-    background: #d8d8d8;
-  }
-  & > * {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
-  }
-}
-// .footer__media {
-//   & > * {
-//     display: inline-block;
-//     vertical-align: middle;
-//     margin-bottom: 0;
-//   }
-//   .footer__title {
-//     margin-right: 10px;
-//   }
-// }
 .card__btn-item {
   margin-bottom: 10px;
 }
@@ -86,28 +54,11 @@ RESPONSIVE STYLES
     max-width: 25%;
   }
 }
-.card__complect-result-new {
-  // display: block;
-
-  // .actions__wrap {
-  //   position: static;
-  //   margin-top: 15px;
-  // }
-}
 .card__docs-title {
   width: calc(100% - 95px);
 }
 .card__docs-info {
   width: 95px;
-}
-.col-footer-half {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-.col-footer__pay {
-  display: none;
-  visibility: hidden;
 }
 .col-catalog-menu {
   -ms-flex: 0 0 25%;
@@ -1056,61 +1007,10 @@ header.header {
     border: 0;
   }
 }
-.card__right-section {
-  padding: 10px 15px;
-  border-bottom: 0 !important;
-}
-.cart__row {
-  -webkit-display: flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-  padding-top: 10px;
-  margin-bottom: -30px;
 
-  .card__result {
-    display: none;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    left: -300px;
-    right: -300px;
-    top: 0;
-    height: 1px;
-    background: $c_border;
-  }
-}
-.card__customer-info {
-  padding: 5px 0;
-}
-.card__actions-line {
-  text-align: left !important;
 
-  .card__btn-item:first-child {
-    margin-right: 0;
-    margin-bottom: 12px !important;
-  }
-  .btn__custom {
-    display: block;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-  }
-}
 .card__variants {
   margin-bottom: 10px;
-}
-.card__section-new .card__right-section .delivery__time-wrap {
-  text-align: left;
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 5px;
-}
-.card__btn-item-div {
-  display: block;
 }
 .card__section-new {
   .card__box-indent {
@@ -1170,26 +1070,7 @@ header.header {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.footer__mobile-question {
-  display: block !important;
-}
-.col-footer-half {
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
 
-  &-hidden {
-    display: none;
-    visibility: hidden;
-  }
-}
-.footer__pay-mobile {
-  text-align: center;
-}
-.footer__pay-services {
-  margin-left: auto;
-  margin-right: auto;
-}
 .consumables__list .slide__custom {
   top: 60px;
 }

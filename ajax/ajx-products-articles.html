@@ -1,0 +1,66 @@
+<div class="slick-usefullarticles">
+  <div class="slick-usefullarticles-slide">
+    <div class="usefull-article">
+      <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-1.jpg" alt="alt"></a></div>
+      <div class="usefull-article-title"><a href="#">Какой отбойный молоток выбрать: пневматический, бензиновый или...</a></div>
+      <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
+      <div class="usefull-article-date">30 декабря 2019</div>
+    </div>
+  </div>
+
+  <div class="slick-usefullarticles-slide">
+    <div class="usefull-article">
+      <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-2.jpg" alt="alt"></a></div>
+      <div class="usefull-article-title"><a href="#">Особенности выбора сварочного аппарата</a></div>
+      <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
+      <div class="usefull-article-date">30 декабря 2019</div>
+    </div>
+  </div>
+
+  <div class="slick-usefullarticles-slide">
+    <div class="usefull-article">
+      <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-3.jpg" alt="alt"></a></div>
+      <div class="usefull-article-title"><a href="#">Как выбрать шуруповерт</a></div>
+      <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
+      <div class="usefull-article-date">9 января 2020</div>
+    </div>
+  </div>
+
+  <div class="slick-usefullarticles-slide">
+    <div class="usefull-article">
+      <div class="usefull-article-img"><a href="#"><img loading="lazy" src="../images/redesign/useful-article-1.jpg" alt="alt"></a></div>
+      <div class="usefull-article-title"><a href="#">Какой отбойный молоток выбрать: пневматический, бензиновый или...</a></div>
+      <div class="usefull-article-txt">Питание отбойного молотка Условия окружающей среды Функциональные...</div>
+      <div class="usefull-article-date">30 декабря 2019</div>
+    </div>
+  </div>
+</div><!--.slick-usefullarticles-->
+
+<div class="ui-centered usefull-block-mobile-link"><a href="#">Смотреть все статьи →</a></div>
+
+
+<script>
+  jQuery(document).ready(function(){
+    $('.slick-usefullarticles').slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>

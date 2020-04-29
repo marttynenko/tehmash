@@ -1,0 +1,75 @@
+<div class="slick-homevideos">
+  <div class="slick-homevideos-slide">
+    <div class="video-item">
+      <div class="video-item-img">
+        <a href="https://www.youtube.com/watch?v=yAtvfRcXPRM" class="ui-video mfp-video">
+          <img loading="lazy" src="../images/redesign/video-item-1.png" alt="alt">
+          <div class="ui-video-play"></div>
+        </a>
+      </div>
+      <div class="video-item-title"><a href="https://www.youtube.com/watch?v=yAtvfRcXPRM" class="mfp-video">Винтовой компрессор Berg ВК-11Р-500 - 10 бар с осушителем</a></div>
+    </div>
+  </div>
+
+  <div class="slick-homevideos-slide">
+    <div class="video-item">
+      <div class="video-item-img">
+        <a href="https://www.youtube.com/watch?v=Ox8D-KREzvk" class="ui-video mfp-video">
+          <img loading="lazy" src="../images/redesign/video-item-2.png" alt="alt">
+          <div class="ui-video-play"></div>
+        </a>
+      </div>
+      <div class="video-item-title"><a href="https://www.youtube.com/watch?v=Ox8D-KREzvk" class="mfp-video">Реле давления (прессостат, моностат) CONDOR MDR 2, устройство и регулировка.</a></div>
+    </div>
+  </div>
+
+  <div class="slick-homevideos-slide">
+    <div class="video-item">
+      <div class="video-item-img">
+        <a href="https://www.youtube.com/watch?v=yAtvfRcXPRM" class="ui-video mfp-video">
+          <img loading="lazy" src="../images/redesign/video-item-1.png" alt="alt">
+          <div class="ui-video-play"></div>
+        </a>
+      </div>
+      <div class="video-item-title"><a href="https://www.youtube.com/watch?v=yAtvfRcXPRM" class="mfp-video">Винтовой компрессор Berg ВК-11Р-500 - 10 бар с осушителем</a></div>
+    </div>
+  </div>
+</div><!--.slick-->
+
+<script>
+  jQuery(document).ready(function () {
+    $('.slick-homevideos').not('.slick-initialized').slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            // arrows: true
+          }
+        }, {
+          breakpoint: 576,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+          }
+        }
+      ]
+    });
+
+    //лениво "тянем" и инициализируем магнифик
+    if ($('.ajax-mfp').length || $('.mfp-video').length) {
+      lazyLibraryLoad(
+        'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css',
+        magnificPopupInit
+      );
+    }
+  });
+</script>

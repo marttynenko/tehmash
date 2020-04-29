@@ -1,0 +1,68 @@
+<div class="slick-additional">
+  <div class="slick-additional-slide">
+    <a href="#" class="additional-product">
+      <div class="additional-product-img"><img loading="lazy" src="../images/redesign/additional-1.jpg" alt="alt"></div>
+      <div class="additional-product-title">Компрессоры</div>
+    </a>
+  </div>
+
+  <div class="slick-additional-slide">
+    <a href="#" class="additional-product">
+      <div class="additional-product-img"><img loading="lazy" src="../images/redesign/additional-2.jpg" alt="alt"></div>
+      <div class="additional-product-title">Ресиверы</div>
+    </a>
+  </div>
+
+  <div class="slick-additional-slide">
+    <a href="#" class="additional-product">
+      <div class="additional-product-img"><img loading="lazy" src="../images/redesign/additional-3.jpg" alt="alt"></div>
+      <div class="additional-product-title">Осушители</div>
+    </a>
+  </div>
+
+  <div class="slick-additional-slide">
+    <a href="#" class="additional-product">
+      <div class="additional-product-img"><img loading="lazy" src="../images/redesign/additional-1.jpg" alt="alt"></div>
+      <div class="additional-product-title">Компрессоры</div>
+    </a>
+  </div>
+
+  <div class="slick-additional-slide">
+    <a href="#" class="additional-product">
+      <div class="additional-product-img"><img loading="lazy" src="../images/redesign/additional-2.jpg" alt="alt"></div>
+      <div class="additional-product-title">Ресиверы</div>
+    </a>
+  </div>
+</div><!--.slick-additional-->
+
+
+<script>
+  jQuery(document).ready(function(){
+    $('.slick-additional').slick({
+      infinite: false,
+      slidesToShow:5,
+      slidesToScroll:5,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow:4,
+            slidesToScroll:4
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            slidesToShow:3,
+            slidesToScroll:3
+          }
+        }, {
+          breakpoint: 576,
+          settings: {
+            slidesToShow:2,
+            slidesToScroll:2
+          }
+        }
+      ]
+    });
+  });
+</script>
