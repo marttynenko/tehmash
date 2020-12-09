@@ -530,63 +530,72 @@ jQuery(document).ready(function(){
     }
   });
 
-  $('.slick-producers').slick({
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4
+  if (document.documentElement.clientWidth > 576) {
+    $('.slick-producers').not(".slick-initialized").slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        }, {
+          breakpoint: 576,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            arrows: false
+          }
         }
-      }, {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      }, {
-        breakpoint: 576,
-        settings: {
-          variableWidth: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
-        }
-      }
-    ]
-  });
+      ]
+    });
+  } else {
+    $('.slick-producers').addClass('native-scroll');
+  }
 
-  $('.slick-clients').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
+  if (document.documentElement.clientWidth > 576) {
+    $('.slick-clients').not('.slick-initialized').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }, {
+          breakpoint: 576,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
         }
-      },{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }, {
-        breakpoint: 576,
-        settings: {
-          variableWidth: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
-        }
-      }
-    ]
-  });
+      ]
+    });
+  } else {
+    $('.slick-clients').addClass('native-scroll');
+  }
 
 
   $('.slick-homevideos').slick({

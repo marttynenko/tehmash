@@ -7128,6 +7128,18 @@ span.invalid { display: inline-block; padding-top: 3px; color: #f76262 !importan
 
 @media (max-height: 500px) { .spy-new { padding: 0; } }
 
+.native-scroll { overflow-x: auto; white-space: nowrap; }
+
+.native-scroll * { white-space: normal; }
+
+.native-scroll::-webkit-scrollbar { width: 0; height: 0; }
+
+.native-scroll::-webkit-scrollbar-thumb { width: 0; height: 0; }
+
+@media (max-width: 576px) { .native-scroll.slick-producers { margin-right: -15px; }
+  .native-scroll .slick-producers-slide { display: inline-block; vertical-align: top; }
+  .native-scroll .slick-clients-slide { display: inline-block; vertical-align: top; } }
+
 /* ---
 RESPONSIVE STYLES
 ------------------- */

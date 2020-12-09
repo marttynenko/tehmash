@@ -111,34 +111,38 @@
 
 <script>
   jQuery(document).ready(function(){
-    $('.slick-clients').not('.slick-initialized').slick({
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
+    if (document.documentElement.clientWidth > 576) {
+      $('.slick-clients').not('.slick-initialized').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          },{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          }, {
+            breakpoint: 576,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false
+            }
           }
-        },{
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }, {
-          breakpoint: 576,
-          settings: {
-            variableWidth: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false
-          }
-        }
-      ]
-    });
+        ]
+      });
+    } else {
+      $('.slick-clients').addClass('native-scroll');
+    }
 
     //лениво "тянем" и инициализируем lightgallery
     if ($('.popup-gallery').length) {
@@ -150,3 +154,7 @@
     }
   });
 </script>
+
+<style>
+
+</style>
