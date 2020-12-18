@@ -7199,6 +7199,8 @@ a.google-play-link:hover { opacity: 0.8; }
 
 .slick-card:not(.slick-initialized) .slick-card-slide:not(:first-child) { position: absolute; visibility: hidden; opacity: 0; }
 
+.producer-item { padding: 0px 15px; }
+
 /* ---
 RESPONSIVE STYLES
 ------------------- */
