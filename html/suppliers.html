@@ -1,0 +1,293 @@
+<!--#include file="inc-header.html"-->
+
+<style>
+/* --- 
+SUPPLIERS --- */
+.suppliers-advantages { margin-bottom: 65px; }
+
+.suppliers-advantages-title { font-size: 28px; margin-bottom: 20px; font-weight: 700; text-align: center; }
+
+.suppliers-advantage { position: relative; padding-left: 95px; margin-bottom: 35px; font-size: 14px; min-height: 70px; }
+
+.suppliers-advantage-icon { position: absolute; left: 0; top: 0; width: 80px; }
+
+.suppliers-advantage-title { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
+
+.suppliers-purpose { margin-bottom: 60px; }
+
+.suppliers-purpose h3, .suppliers-purpose .h3 { margin-bottom: 20px; font-weight: 700; }
+
+.suppliers-purpose-list { list-style: none; }
+
+@media (min-width: 992px) { .suppliers-purpose-list { padding-right: 60px; } }
+
+.suppliers-purpose-list li { position: relative; padding-left: 30px; margin-bottom: 20px; }
+
+.suppliers-purpose-list li:before { content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; background: url(../images/suppliers/checked.svg) center no-repeat; background-size: contain; }
+
+.suppliers-appeal { padding: 93px 0px 70px; margin-bottom: 100px; position: relative; background: #205EA4; color: #FFF; z-index: 1; }
+
+.suppliers-appeal:after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: -4000px; right: -4000px; background: #205EA4; }
+
+.suppliers-appeal-title { max-width: 520px; margin: 0 auto 20px; font-size: 28px; text-align: center; }
+
+.suppliers-appeal-steps { max-width: 900px; margin: 0 auto; }
+
+@media (min-width: 660px) { .suppliers-appeal-steps { position: relative; display: -ms-flex; display: flex; justify-content: space-between; }
+  .suppliers-appeal-steps:before, .suppliers-appeal-steps:after { content: ""; position: absolute; top: 42%; width: 46px; height: 8px; background: url(../images/suppliers/arrow.svg) center no-repeat; background-size: contain; }
+  .suppliers-appeal-steps:before { left: 23%; }
+  .suppliers-appeal-steps:after { left: 63%; } }
+
+.suppliers-step { position: relative; font-size: 14px; flex: 0 0 170px; margin-bottom: 23px; }
+
+.suppliers-step-step { line-height: 1; opacity: 0.15; font-size: 100px; font-weight: 800; }
+
+.suppliers-step-icon { position: absolute; left: 0; top: 45px; }
+
+.suppliers-form { padding: 35px 50px 50px; border: 1px solid #D1DEED; color: #8F8F8F; font-size: 13px; }
+
+.suppliers-form-title { text-align: center; margin-bottom: 25px; font-weight: 700; font-size: 20px; text-transform: uppercase; color: #0C5EA7; }
+
+.suppliers-form .ui-btn { text-transform: uppercase; background: #1B5CA7; color: #FFF; }
+
+.suppliers-form .ui-btn:hover { background: #397fd0; }
+
+.iconed-input { position: relative; }
+
+.iconed-input input { display: block; height: 55px; padding-left: 68px; border-color: #D1DEED; font-size: 13px; }
+
+.iconed-input-icon { position: absolute; left: 1px; top: 1px; height: 53px; width: 54px; background: #f5f9fc; padding: 10px; display: -ms-flex; display: flex; -ms-align-items: center; align-items: center; -ms-justify-content: center; justify-content: center; }
+
+.ui-field { margin-bottom: 10px; }
+
+.ui-file { position: relative; height: 55px; padding: 0px 15px; line-height: 1.2; display: -ms-flex; display: flex; -ms-align-items: center; align-items: center; -ms-justify-content: center; justify-content: center; border: 1px solid #D1DEED; background: #f5f9fc; text-align: center; color: #8F8F8F; }
+
+.ui-file input[type="file"] { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 1; }
+
+.ui-file-txt { position: relative; padding-left: 24px; }
+
+.ui-file-txt:before { content: ""; position: absolute; left: 0; top: 50%; width: 17px; height: 16px; margin-top: -8px; background: url(../images/suppliers/field-file.svg) center no-repeat; background-size: contain; }
+
+.suppliers-feedback-img { position: relative; min-height: 100%; overflow: hidden; }
+
+.suppliers-feedback-img img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); min-height: 100%; min-width: 100%; max-width: none; }
+
+@media (max-width: 992px) { .col-suppliers-feedback-img { order: 1; }
+.suppliers-form { padding: 0; border: 0; } }
+
+@media (max-width: 768px) { .suppliers-purpose .col-sm-6 { flex: 0 0 100%; max-width: 100%; }
+.suppliers-purpose-img { display: none; } }
+
+@media (max-width: 660px) { .suppliers-step { padding-left: 108px; padding-top: 35px; min-height: 85px; }
+.suppliers-step-step { position: absolute; left: 0; top: 0; opacity: 0.08; }
+.suppliers-step-icon { top: 32px; left: 32px; } }
+
+@media (max-width: 576px) { .suppliers-advantages { margin-bottom: 35px; }
+.suppliers-advantage { margin-bottom: 20px; padding-top: 5px; }
+.suppliers-purpose { margin-bottom: 35px; }
+.suppliers-appeal { padding: 50px 0px 30px; margin-bottom: 60px; }
+.col-suppliers-feedback-img { display: none; visibility: hidden; } }
+</style>
+
+<div class="content">
+  <div class="container">
+    <ol class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+        <span itemprop="name"><a href="/">Главная</a></span>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Поставщикам</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ol>
+
+    <div class="page__title">
+      <h1>Поставщикам Pnevmoteh</h1>
+    </div>
+
+    <div class="suppliers">
+      <div class="suppliers-advantages">
+        <div class="suppliers-advantages-title">Pnevmoteh - это</div>
+
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-1.svg" alt="140 000 посетителей" loading="lazy"></div>
+              <div class="suppliers-advantage-title">140 000 посетителей</div>
+              <div class="suppliers-advantage-txt">ежедневно заходят на <br> наш сайт</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-2.svg" alt="100+ брендов" loading="lazy"></div>
+              <div class="suppliers-advantage-title">100+ брендов</div>
+              <div class="suppliers-advantage-txt">представлено на сайте</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-3.svg" alt="5 звезд" loading="lazy"></div>
+              <div class="suppliers-advantage-title">5 звезд</div>
+              <div class="suppliers-advantage-txt">на Яндекс.Маркет и лояльная <br> аудитория клиентов</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-4.svg" alt="78 000 наименований" loading="lazy"></div>
+              <div class="suppliers-advantage-title">78 000 наименований</div>
+              <div class="suppliers-advantage-txt">товаров на сайте</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-5.svg" alt="500+ товаров" loading="lazy"></div>
+              <div class="suppliers-advantage-title">500+ товаров</div>
+              <div class="suppliers-advantage-txt">покупают каждый день</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="suppliers-advantage">
+              <div class="suppliers-advantage-icon"><img src="../images/suppliers/advantage-2.svg" alt="5 стран" loading="lazy"></div>
+              <div class="suppliers-advantage-title">5 стран</div>
+              <div class="suppliers-advantage-txt">где мы представлены на <br> рынке</div>
+            </div>
+          </div>
+        </div>
+      </div><!--.advantages-->
+
+      <div class="suppliers-purpose">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="h3">Мы предлагаем</div>
+            <ul class="suppliers-purpose-list">
+              <li>Представляем ваш бренд на отдельной странице сайта с логотипом и описанием</li>
+              <li>Храним закупленный товар на собственном складе</li>
+              <li>Расширяем ассортимент и выводим новые категории, чтобы закрыть все потребности</li>
+              <li>Доставляем заказы во все регионы Росии, Беларуси, Казахстана, Кыргыстана и Армении</li>
+              <li>Регулярно проводим опросы покупателей и узнаем, каких товаров им не хватает</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <img src="../images/suppliers/purpose.jpg" alt="alt" class="suppliers-purpose-img" loading="lazy">
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="suppliers-appeal">
+        <div class="suppliers-appeal-title">Миллионы клиентов ждут появления <strong>ваших товаров</strong> на сайте!</div>
+
+        <div class="suppliers-appeal-steps">
+          
+          <div class="suppliers-step">
+            <div class="suppliers-step-icon"><img src="../images/suppliers/step-1.svg" alt="Заполните анкету" loading="lazy"></div>
+            <div class="suppliers-step-step">01</div>
+            <div class="suppliers-step-txt"><strong>Заполните анкету</strong> о вашей компании и ассортименте</div>
+          </div>
+        
+          <div class="suppliers-step">
+            <div class="suppliers-step-icon"><img src="../images/suppliers/step-2.svg" alt="Заполните анкету" loading="lazy"></div>
+            <div class="suppliers-step-step">02</div>
+            <div class="suppliers-step-txt">Мы рассмотрим ее и <strong>дадим ответ</strong> в срок до 5 дней</div>
+          </div>
+        
+          <div class="suppliers-step">
+            <div class="suppliers-step-icon"><img src="../images/suppliers/step-3.svg" alt="Заполните анкету" loading="lazy"></div>
+            <div class="suppliers-step-step">03</div>
+            <div class="suppliers-step-txt"><strong>Получаете договор</strong> и документы для начала сотрудничества</div>
+          </div>
+
+        </div>
+      </div><!--.steps-->
+
+      <div class="suppliers-feedback">
+        <div class="row">
+          <div class="col-sm-6 col-suppliers-feedback-img">
+            <div class="suppliers-feedback-img">
+              <img src="../images/suppliers/form-img.jpg" alt="alt" loading="lazy">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="suppliers-form">
+              <div class="suppliers-form-title">Заполните форму</div>
+              <form action="" id="suppliers_form">
+                <div class="ui-field">
+                  <div class="iconed-input">
+                    <div class="iconed-input-icon"><img src="../images/suppliers/field-user.svg" alt="user icon" loading="lazy"></div>
+                    <input type="text" name="name" placeholder="Имя" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="iconed-input">
+                    <div class="iconed-input-icon"><img src="../images/suppliers/field-phone.svg" alt="user icon" loading="lazy"></div>
+                    <input type="tel" name="phone" placeholder="Телефон" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="iconed-input">
+                    <div class="iconed-input-icon"><img src="../images/suppliers/field-company.svg" alt="user icon" loading="lazy"></div>
+                    <input type="text" name="company" placeholder="Название компании" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="iconed-input">
+                    <div class="iconed-input-icon"><img src="../images/suppliers/field-link.svg" alt="user icon" loading="lazy"></div>
+                    <input type="text" name="xml" placeholder="Ссылка на .xml / .yml файл" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="iconed-input">
+                    <div class="iconed-input-icon"><img src="../images/suppliers/field-web.svg" alt="user icon" loading="lazy"></div>
+                    <input type="text" name="site" placeholder="Сайт или ссылка на презентацию" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="ui-file">
+                    <input type="file" name="file" accept=".gif,.jpg,.jpeg,.png,.bmp,.doc,.docx,.xls,.xlsx">
+                    <span class="ui-file-txt">Прикрепите прайс с ценами (необязательно)</span>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <div class="ui-file-hint">Максимальный размер файла: 8 МБ. <br>
+                    Допустимые типы файлов: .gif, .jpg, .jpeg, .png, .bmp, .doc, .docx, .xls, .xlsx.</div>
+                </div>
+
+                <button class="ui-btn ui-btn-big ui-btn-blue ui-btn-block">Отправить</button>
+              </form>
+            </div>
+
+            <script>
+              document.addEventListener('DOMContentLoaded',function(){
+                lazyLibraryLoad(
+                  'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js',
+                  '',
+                  () => {
+                    //загружаем переводы и настройки валидатора
+                    jQueryValidatorDefaults();
+                    //валидируем форму
+                    $('#suppliers_form').validate({
+                    });
+                  }
+                )
+              });
+            </script>
+          </div>
+        </div>
+      </div><!--.feedback-->
+    </div><!--.suppliers-->
+  </div>
+</div>
+
+<!--#include file="inc-footer-dark-new.html"-->
